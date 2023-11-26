@@ -16,11 +16,9 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 // Weight setup
 float calibration_factor = -450;
 float units;
-float ounces;
 
 // Declaring button for tare
 int buttonPin = 4;
-
 
 void setup() {
 
@@ -48,7 +46,7 @@ void setup() {
   Serial.print("  ");
 
   // Calibration factor reading
-  scale.set_scale(-495);
+  scale.set_scale(calibration_factor);
   Serial.print("Calibration factor: ");
   Serial.print(scale.get_scale());
 
@@ -63,15 +61,13 @@ void loop() {
 
   // Read the change in weight
   units = scale.get_units(10);
-  ounces = units * 0.035274;
 
   // Print the change in weight
   Serial.print("Weight: ");
   Serial.print(units,5);
   Serial.println(" grams");
   
-  
-
+  // Print the change in weight on the LCD
   lcd.setCursor(0, 0);
   lcd.print("Weight: ");
   lcd.print(units);
@@ -84,7 +80,7 @@ void loop() {
     Serial.println("Tare");
   }
 
-  // Wait 1 second before reading again
+  // Wait 100ms before reading again
   delay(100);
 
 }

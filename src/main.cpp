@@ -4,8 +4,8 @@
 #include <HX711.h>
 
 // HX711 circuit wiring
-const int LOADCELL_DOUT_PIN = 3;
-const int LOADCELL_SCK_PIN = 2;
+const int LOADCELL_DOUT_PIN = 12;
+const int LOADCELL_SCK_PIN = 14;
 
 // HX711 constructor
 HX711 scale;
@@ -18,7 +18,7 @@ float calibration_factor = -450;
 float units;
 
 // Declaring button for tare
-int buttonPin = 4;
+int buttonPin = 13;
 
 void setup() {
 
@@ -91,12 +91,16 @@ void loop() {
   lcd.print("Weight: ");
   lcd.print(units*(-1));
   lcd.print(" g");
+  lcd.setCursor(0, 1);
+  lcd.print("      ");
 
 
   // Tare the scale
-  if (digitalRead(buttonPin) == LOW) {
+  if (digitalRead(buttonPin) == HIGH) {
     scale.tare();
     Serial.println("Tare");
+    lcd.setCursor(0, 1);
+    lcd.print("Tare");
   }
 
   // Wait 100ms before reading again

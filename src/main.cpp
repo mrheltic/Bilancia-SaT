@@ -25,6 +25,18 @@ void setup() {
   // Initialize Serial Monitor
   Serial.begin(115200);
 
+  // Print contributors
+  Serial.println("-------------------------------");
+  Serial.print("Bilancia SaT - Gruppo 4\n");
+  Serial.println("-------------------------------");
+  Serial.println("Contributors:");
+  Serial.println("- Vincenzo Pio Florio");
+  Serial.println("- Francesco Stasi");
+  Serial.println("- Simona Vatinno");
+  Serial.println("- Davide Tonti");
+  Serial.println("- Giovanni Zito");
+  Serial.println("-------------------------------");
+
   // Initialize LCD
   lcd.init();
   lcd.backlight();
@@ -58,6 +70,7 @@ void setup() {
   // Tare reading
   scale.tare(); //Reset the scale to 0
   Serial.println("Tare initialized");
+  Serial.println("");
   Serial.println("Readings:");
   Serial.println("");
 

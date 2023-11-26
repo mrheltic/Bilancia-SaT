@@ -83,13 +83,13 @@ void loop() {
 
   // Print the change in weight
   Serial.print("Weight: ");
-  Serial.print(units,5);
+  Serial.print(units*(-1),5);
   Serial.println(" grams");
   
   // Print the change in weight on the LCD
   lcd.setCursor(0, 0);
   lcd.print("Weight: ");
-  lcd.print(units);
+  lcd.print(units*(-1));
   lcd.print(" g");
 
 

@@ -29,31 +29,37 @@ void setup() {
   lcd.init();
   lcd.backlight();
   Serial.println("LCD initialized");
+  Serial.println("");
 
   // Initialize button
   pinMode(buttonPin, INPUT_PULLUP);
   Serial.println("Button initialized");
+  Serial.println("");
 
   // Initialize library with data output pin, clock input pin and gain factor.
   scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
   Serial.println("Scale initialized");
+  Serial.println("");
 
   // Raw data reading
   Serial.print("Read: ");
   Serial.print(scale.read());
   Serial.print("  ");
   Serial.print(scale.read_average(20));
-  Serial.print("  ");
+  Serial.println("  ");
+  Serial.println("");
 
   // Calibration factor reading
   scale.set_scale(calibration_factor);
   Serial.print("Calibration factor: ");
-  Serial.print(scale.get_scale());
+  Serial.println(scale.get_scale());
+  Serial.println("");
 
   // Tare reading
   scale.tare(); //Reset the scale to 0
   Serial.println("Tare initialized");
   Serial.println("Readings:");
+  Serial.println("");
 
 }
 
@@ -75,7 +81,7 @@ void loop() {
 
 
   // Tare the scale
-  if (digitalRead(buttonPin) == HIGH) {
+  if (digitalRead(buttonPin) == LOW) {
     scale.tare();
     Serial.println("Tare");
   }

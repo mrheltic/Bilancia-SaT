@@ -59,6 +59,7 @@ The following libraries are required for this program to compile and run:
 - You can modify the calibration factor (`calibration_factor`) to adjust the scale according to your specific load cell and measurement requirements.
 - The program can be extended to support different measurement units by adding appropriate conversions and displaying the result in the desired unit on the LCD screen.
 - Error handling and validation can be implemented to handle exceptional cases, such as when the load cell is not connected or when the measurements are out of range, making them block the execution of the entire program.
+- You can compile this code to run also on other board fitting better in 3d printed case (actually tested on Arduino Uno, ESP8266)
 
 ## License
 This project is licensed under the MIT license.

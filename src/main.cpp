@@ -1,3 +1,21 @@
+/***************************************************
+ * Bilancia SaT - Weight Measurement
+ *
+ * Contributors:
+ * - Vincenzo Pio Florio
+ * - Francesco Stasi
+ * - Simona Vatinno
+ * - Davide Tonti
+ * - Giovanni Zito
+ *
+ * This project utilizes an HX711 load cell
+ * amplifier, an LCD display, and a tare button to
+ * create a weighing system. The program continuously
+ * reads the weight and displays it on both the Serial
+ * Monitor and the LCD screen. The tare button allows
+ * for resetting the scale to zero.
+ ***************************************************/
+
 #include <Arduino.h>
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
@@ -14,7 +32,7 @@ HX711 scale;
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 // Weight setup
-float calibration_factor = -450;
+float calibration_factor = -450; //Calculated based on known weight
 float units;
 
 // Declaring button for tare

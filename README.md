@@ -38,13 +38,13 @@ The ATtiny or Arduino Nano is a microcontroller development board used for progr
 
 <img src="medias/parts/load_cell.jpg" alt="Load Cell">
 
-The 5KG load cell is a weight sensor used to measure the weight of objects placed on the scale.
+The 5KG load cell is a weight sensor used to measure the weight of objects placed on the plate.
 
 ### HX711
 
 <img src="medias/parts/hx711.jpg" alt="HX711">
 
-The HX711 is an amplifier and analog-to-digital converter used to amplify and convert the analog signal from the load cell into a digital signal that can be read by the microcontroller.
+The HX711 is used to amplify and convert the analog signal from the load cell into a digital one that can be read by the microcontroller.
 
 ### PCB Board
 
@@ -70,7 +70,7 @@ Tare button:
 - Optionally, add a pull-up resistor between the digital input pin and the 5V pin of the Arduino board to ensure stable button readings. (We implemented it, if you want to add it, you can modify it in declaration part)
 
 ## Variables
-The program utilizes the following variables:
+The program uses the following variables:
 
 - `calibration_factor`: This variable is used to calibrate the scale. It is a float value that can be adjusted based on the specific characteristics of the load cell and the desired measurement units.
 - `units`: This variable stores the measured weight in grams.

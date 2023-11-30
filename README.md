@@ -55,6 +55,8 @@ The PCB (Printed Circuit Board) is used to connect and organize the electronic c
 ## Wiring
 The components are wired as follows:
 
+<img src="medias/load_cell_schematic_bb.png" alt="Schematic">
+
 HX711 load cell amplifier:
 - LOADCELL_DOUT_PIN is connected to pin 3 of the Arduino board.
 - LOADCELL_SCK_PIN is connected to pin 2 of the Arduino board.
@@ -98,6 +100,32 @@ The following libraries are required for this program to compile and run:
 - Wire.h: Enables communication with I2C devices.
 - LiquidCrystal_I2C.h: Allows interfacing with I2C-based LCD displays.
 - HX711.h: Provides the HX711 load cell amplifier functionality.
+
+## 3D Printed Scale Project
+
+This project involves the creation of a scale using a combination of 3D-printed parts and electronic components. The modular design of the project allows for customization of the 3D-printed parts according to your specific needs.
+
+### Parts Created
+
+We have designed and printed several key parts for the scale, including:
+
+- **Platform**: where the objects to be weighed are placed.
+
+<img src="medias/printed_part/place_load_cell.png" alt="Platform">
+
+- **Load Cell Support**: securely holds the load cell in place.
+
+<img src="medias/printed_part/support_load_cell.png" alt="Support">
+
+- **Body**: provides to hold all the components and gives an aesthetically pleasing appearance.
+
+<img src="medias/printed_part/body_load_cell.png" alt="Body">
+
+These 3D-printed parts have been carefully designed to ensure proper functionality and compatibility with the electronic components used in the project.
+
+### Replicating the Project
+
+If you are interested in recreating this scale project at home, you can easily replicate the 3D-printed parts by downloading the provided design files. Simply import the files into your preferred 3D modeling software and adjust them to fit your specific printer and requirements. Once you have the 3D-printed parts, you can follow the instructions in the project documentation to assemble and integrate the electronic components.
 
 ## Further Improvements
 - You can modify the calibration factor (`calibration_factor`) to adjust the scale according to your specific load cell and measurement requirements.

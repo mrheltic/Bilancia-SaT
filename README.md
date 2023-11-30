@@ -2,6 +2,28 @@
 
 This project uses Arduino and various libraries to create a weighing system using an HX711 load cell amplifier, an LCD display, and a tare button. The program continuously reads the change in weight and displays it on both the Serial Monitor and the LCD screen. We also implemented a tare button to for reset the scale to zero when needed.
 
+### Example
+
+<img src="medias/photos/test1.jpg" alt="Example">
+<img src="medias/photos/test2.jpg" alt="Example">
+
+### Front View
+
+<img src="medias/photos/front.jpg" alt="Front View">
+
+### Top View
+
+<img src="medias/photos/top.jpg" alt="Top View">
+
+### Bottom View
+
+<img src="medias/photos/bottom.jpg" alt="Bottom View">
+
+### Side View
+
+<img src="medias/photos/side1.jpg" alt="Side View">
+<img src="medias/photos/side2.jpg" alt="Side View">
+
 ## Components Used
 
 ### Battery 9V
@@ -51,6 +73,10 @@ The HX711 is used to amplify and convert the analog signal from the load cell in
 <img src="medias/parts/pcb_board.jpg" alt="PCB board">
 
 The PCB (Printed Circuit Board) is used to connect and organize the electronic components in the project.
+
+### Rubber supports
+
+<img src="medias/parts/rubber_support.jpg" alt="Rubber support">
 
 ## Wiring
 The components are wired as follows:

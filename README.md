@@ -77,7 +77,7 @@ The program uses the following variables:
 
 ## Setup
 - Serial Monitor Initialization: The Serial Monitor is initialized with a baud rate of 115200.
-- LCD Initialization: The LCD display is initialized using the specified I2C address, number of columns, and number of rows.
+- LCD Initialization: The LCD display is initialized using the above mentioned I2C address and the number of columns and rows.
 - Button Initialization: The tare button pin is declared as an input, and if needed, a pull-up resistor is enabled.
 - Scale Initialization: The HX711 scale is initialized with the specified data output pin and clock input pin.
 - Raw Data Reading: The program reads the raw data from the scale using the `scale.read()` and `scale.read_average(20)` methods. This helps in determining the calibration factor.

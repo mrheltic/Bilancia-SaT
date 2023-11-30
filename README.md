@@ -18,7 +18,7 @@ The HW-139 touch button is a component used for touch detection. It can be used 
 
 ### I2C 16x2 LCD Display
 
-<img src="medias/parts/i2c_screen.jpg" alt="16x2 Screen">
+<img src="medias/parts/i2c_Screen.jpg" alt="16x2 Screen">
 
 The I2C 16x2 LCD display is used to show information such as the measured weight or other relevant details.
 

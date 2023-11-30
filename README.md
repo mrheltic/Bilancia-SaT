@@ -89,7 +89,7 @@ The program uses the following variables:
 - Weight Measurement: The program continuously reads the change in weight using the `scale.get_units(10)` method. The 10 parameter represents the number of samples to average for a stable reading.
 - LCD Output: The change in weight is displayed on the LCD screen by setting the cursor position and printing the weight value.
 - Tare Functionality: If the tare button is pressed (HIGH state), the scale is tared again using the `scale.tare()` method. This allows for resetting the scale to zero when needed.
-- Delay: The program waits for 100 milliseconds before reading the weight again. This delay helps in stabilizing the measurements and avoiding rapid fluctuations.
+- Delay: The program waits for 100 milliseconds before reading the weight again. This delay helps to stabilize and to avoid rapid fluctuations of the measurements.
 
 ## Dependencies
 The following libraries are required for this program to compile and run:
@@ -103,7 +103,7 @@ The following libraries are required for this program to compile and run:
 - You can modify the calibration factor (`calibration_factor`) to adjust the scale according to your specific load cell and measurement requirements.
 - The program can be extended to support different measurement units by adding appropriate conversions and displaying the result in the desired unit on the LCD screen.
 - Error handling and validation can be implemented to handle exceptional cases, such as when the load cell is not connected or when the measurements are out of range, making them block the execution of the entire program.
-- You can compile this code to run also on other board fitting better in 3d printed case (actually tested on Arduino Uno, ESP8266)
+- You can compile this code to run also on other boards that are better for 3D printed cases (actually tested on Arduino Uno, ESP8266)
 
 ## License
 This project is licensed under the MIT license.

@@ -127,7 +127,7 @@ The following libraries are required for this program to compile and run:
 - LiquidCrystal_I2C.h: Allows interfacing with I2C-based LCD displays.
 - HX711.h: Provides the HX711 load cell amplifier functionality.
 
-## 3D Printed Scale Project
+## 3D Printed parts
 
 This project involves the creation of a scale using a combination of 3D-printed parts and electronic components. The modular design of the project allows for customization of the 3D-printed parts according to your specific needs.
 
@@ -160,4 +160,4 @@ If you are interested in recreating this scale project at home, you can easily r
 - You can compile this code to run also on other boards that are better for 3D printed cases (actually tested on Arduino Uno, ESP8266)
 
 ## License
-This project is licensed under the MIT license.
+This project is licensed under the GPLv3 license.

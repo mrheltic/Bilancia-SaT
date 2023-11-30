@@ -3,10 +3,54 @@
 This project utilizes Arduino and various libraries to create a weighing system using an HX711 load cell amplifier, an LCD display, and a tare button. The program continuously reads the change in weight and displays it on both the Serial Monitor and the LCD screen. We also implemented a tare button to for reset the scale to zero when needed.
 
 ## Components Used
-- Arduino board
-- HX711 load cell amplifier
-- LCD display (I2C interface)
-- Tare button
+
+### Battery 9V
+
+<img src="medias/parts/9v_battery.jpg" alt="9V Battery">
+
+The 9V battery is used as a portable power source for the project.
+
+### Touch Button (HW-139)
+
+<img src="medias/parts/touch_sensor.jpg" alt="Touch button">
+
+The HW-139 touch button is a component used for touch detection. It can be used as a tare button for resetting the scale.
+
+### I2C 16x2 LCD Display
+
+<img src="medias/parts/i2c_screen.jpg" alt="16x2 Screen">
+
+The I2C 16x2 LCD display is used to show information such as the measured weight or other relevant details.
+
+### ON-OFF Switch
+
+<img src="medias/parts/on_off_switch.jpg" alt="Switch">
+
+The ON-OFF switch is used to control the power supply to the circuit.
+
+### ATtiny or Arduino Nano
+
+<img src="medias/parts/board.jpg" alt="Board">
+
+The ATtiny or Arduino Nano is a microcontroller development board used for programming and controlling the scale and its components.
+
+### 5KG Load Cell
+
+<img src="medias/parts/load_cell.jpg" alt="Load Cell">
+
+The 5KG load cell is a weight sensor used to measure the weight of objects placed on the scale.
+
+### HX711
+
+<img src="medias/parts/hx711.jpg" alt="HX711">
+
+The HX711 is an amplifier and analog-to-digital converter used to amplify and convert the analog signal from the load cell into a digital signal that can be read by the microcontroller.
+
+### PCB Board
+
+<img src="medias/parts/pcb_board.jpg" alt="PCB board">
+
+The PCB (Printed Circuit Board) is used to connect and organize the electronic components in the project.
 
 ## Wiring
 The components are wired as follows:

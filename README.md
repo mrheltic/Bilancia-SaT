@@ -143,7 +143,7 @@ We have designed and printed several key parts for the scale, including:
 
 <img src="medias/printed_part/support_load_cell.png" alt="Support">
 
-- **Body**: provides to hold all the components and gives an aesthetically pleasing appearance.
+- **Body**: provides support to all the components and gives an aesthetically pleasing appearance.
 
 <img src="medias/printed_part/body_load_cell.png" alt="Body">
 

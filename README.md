@@ -80,9 +80,9 @@ The program uses the following variables:
 - LCD Initialization: The LCD display is initialized using the above mentioned I2C address and the number of columns and rows.
 - Button Initialization: The tare button pin is declared as an input, and if needed, a pull-up resistor is enabled.
 - Scale Initialization: The HX711 scale is initialized with the specified data output pin and clock input pin.
-- Raw Data Reading: The program reads the raw data from the scale using the `scale.read()` and `scale.read_average(20)` methods. This helps in determining the calibration factor.
+- Raw Data Reading: The program reads the raw data from the scale using the `scale.read()` and `scale.read_average(20)` methods. This helps to determine the calibration factor.
 - Calibration Factor Reading: The calibration factor is set using the `scale.set_scale()` method based on the raw data readings. The calibration factor adjusts the scale to provide accurate weight measurements.
-- Tare Reading: The scale is tared using the `scale.tare()` method, which resets the scale to zero. This allows for measuring the weight of objects without considering the weight of the container.
+- Tare Reading: The scale is tared using the `scale.tare()` method, which resets the scale to zero. This allows to measure the weight of objects neglecting the container's one.
 - Serial and LCD Initialization Messages: Initialization messages are printed to the Serial Monitor and the LCD display to indicate that the setup process is completed.
 
 ## Main Loop

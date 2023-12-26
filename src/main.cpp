@@ -22,8 +22,8 @@
 #include <HX711.h>
 
 // HX711 circuit wiring
-const int LOADCELL_DOUT_PIN = 12;
-const int LOADCELL_SCK_PIN = 14;
+const int LOADCELL_DOUT_PIN = 4;
+const int LOADCELL_SCK_PIN = 3;
 
 // HX711 constructor
 HX711 scale;
@@ -36,7 +36,7 @@ float calibration_factor = -450; //Calculated based on known weight
 float units;
 
 // Declaring button for tare
-int buttonPin = 13;
+int buttonPin = 5;
 
 void setup() {
 

@@ -79,6 +79,8 @@ void setup() {
   // Serial.println("  ");
   // Serial.println("");
 
+  delay(300);
+
   // Calibration factor reading
   scale.set_scale(calibration_factor);
   Serial.print("Calibration factor: ");
@@ -97,7 +99,7 @@ void setup() {
 void loop() {
 
   // Read the change in weight
-  units = scale.get_units(10);
+  units = scale.get_units(30);
 
   // Print the change in weight
   Serial.print("Weight: ");

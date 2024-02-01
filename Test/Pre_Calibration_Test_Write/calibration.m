@@ -63,6 +63,7 @@ coeff = polyfit( x, y, 1);
 calibration_factor = coeff(1);
 offset = coeff(2);
 z = polyval(coeff, x);
+err = z - y;
 err2 = norm( z - y, 2);
 fprintf('\nError (linear regression): %1.2e \n', err2);
 figure(1)

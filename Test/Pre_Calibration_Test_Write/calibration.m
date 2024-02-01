@@ -59,12 +59,12 @@ writetable(T, 'calibration.txt');
 writetable(T, 'calibration.csv');
 
 %linear regression:
-coeff = polyfit( x, y, 1);
+coeff = polyfit(x, y, 1);
 calibration_factor = coeff(1);
 offset = coeff(2);
 z = polyval(coeff, x);
-err = z - y;
-err2 = norm( z - y, 2);
+err = z - x;
+err2 = norm(z - x, 2);
 fprintf('\nError (linear regression): %1.2e \n', err2);
 figure(1)
 clf;
@@ -73,7 +73,7 @@ plot(x, y, 'go', 'LineWidth' , 1, ...
     'MarkerFaceColor', 'g' ,...
     'MarkerSize', 10);
 hold on;
-plot( x, z); 
+plot(x, z); 
 title('Linear regression');
 xlabel('X');
 ylabel('Y');

@@ -37,7 +37,7 @@ void loop() {
     if(Serial.read() == '\n'){
       // Read the change in weight
       units = scale.get_units(50); //average of 50 raw measures
-      Serial.println(units, 0);
+      Serial.println(units);
     }
   }
 }

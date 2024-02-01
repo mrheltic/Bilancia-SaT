@@ -32,14 +32,14 @@ HX711 scale;
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 // Weight setup
-float calibration_factor = -450; //Calculated based on known weight
+float calibration_factor = 471.42068;
+float offset = 429430202;
 float units;
 
 // Declaring button for tare
 int buttonPin = 5;
 
 void setup() {
-
   // Initialize Serial Monitor
   Serial.begin(115200);
 
@@ -87,17 +87,17 @@ void setup() {
   Serial.println(scale.get_scale());
   Serial.println("");
 
+  scale.set_offset(offset);
+
   // Tare reading
   scale.tare(); //Reset the scale to 0
   Serial.println("Tare initialized");
   Serial.println("");
   Serial.println("Readings:");
   Serial.println("");
-
 }
 
 void loop() {
-
   // Read the change in weight
   units = scale.get_units(30);
 

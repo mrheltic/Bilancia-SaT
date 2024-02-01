@@ -20,14 +20,8 @@ void setup() {
   // Tare reading
   scale.tare(); //Reset the scale to 0
 
-  // scale.set_offset(0); //1st test: err = 2738.4815414696136
-  // scale.set_scale(1);
-
-  // scale.set_offset(-3.504772727272725e+05); //2nd test: err = 7.351800439142071
-  // scale.set_scale(3.074913939393921e+02);
-
-  scale.set_offset(-3.504788399999997e+05); //3rd test: err = 4.064510108763708
-  scale.set_scale(3.074913939393921e+02);
+  scale.set_offset(0); //1st test
+  scale.set_scale(1);
 
   Serial.print("Setup done");
 }

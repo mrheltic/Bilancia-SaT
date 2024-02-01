@@ -153,6 +153,26 @@ These 3D-printed parts have been carefully designed to ensure proper functionali
 
 If you are interested in recreating this scale project at home, you can easily replicate the 3D-printed parts by downloading the provided design files. Simply import the files into your preferred 3D modeling software and adjust them to fit your specific printer and requirements. Once you have the 3D-printed parts, you can follow the instructions in the project documentation to assemble and integrate the electronic components.
 
+## Test
+
+
+
+### Noise
+
+
+
+### Repeatability
+
+
+
+### Pre Calibration Test (Write)
+
+
+
+### Post Calibration Test (Write)
+
+
+
 ## Further Improvements
 - You can modify the calibration factor (`calibration_factor`) to adjust the scale according to your specific load cell and measurement requirements.
 - The program can be extended to support different measurement units by adding appropriate conversions and displaying the result in the desired unit on the LCD screen.

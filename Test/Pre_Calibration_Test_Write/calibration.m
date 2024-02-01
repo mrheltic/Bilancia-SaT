@@ -33,11 +33,11 @@ for i = 1 : N
             input(prompt);
         elseif j == 4
             prompt = ['Place the object in the' ...
-                ' top rigth corner of the scale and then press enter: '];
+                ' top right corner of the scale and then press enter: '];
             input(prompt);
         elseif j == 5
             prompt = ['Place the object in the' ...
-                ' bottom rigth corner of the scale and then press enter: '];
+                ' bottom right corner of the scale and then press enter: '];
             input(prompt);
         end
         fprintf(s, '\n');

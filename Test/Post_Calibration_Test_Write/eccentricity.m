@@ -28,10 +28,10 @@ for i = 1 : N
             ' top left corner of the scale and then press enter: '];
     elseif i == 4
         prompt = ['Place the object in the' ...
-            ' top rigth corner of the scale and then press enter: '];
+            ' top right corner of the scale and then press enter: '];
     elseif i == 5
         prompt = ['Place the object in the' ...
-            ' bottom rigth corner of the scale and then press enter: '];
+            ' bottom right corner of the scale and then press enter: '];
     end
     input(prompt);
     fprintf(s, '\n');

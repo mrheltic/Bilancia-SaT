@@ -72,12 +72,12 @@ void setup() {
   Serial.println("");
 
   // Raw data reading
-  Serial.print("Read: ");
-  Serial.print(scale.read());
-  Serial.print("  ");
-  Serial.print(scale.read_average(20));
-  Serial.println("  ");
-  Serial.println("");
+  // Serial.print("Read: ");
+  // Serial.print(scale.read());
+  // Serial.print("  ");
+  // Serial.print(scale.read_average(20));
+  // Serial.println("  ");
+  // Serial.println("");
 
   // Calibration factor reading
   scale.set_scale(calibration_factor);
@@ -121,8 +121,4 @@ void loop() {
     lcd.setCursor(0, 1);
     lcd.print("Tare");
   }
-
-  // Wait 100ms before reading again
-  delay(100);
-
 }

@@ -99,7 +99,7 @@ void setup() {
 
 void loop() {
   // Read the change in weight
-  units = scale.get_units(30);
+  units = scale.get_units(20);
 
   // Print the change in weight
   Serial.print("Weight: ");

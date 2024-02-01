@@ -5,7 +5,7 @@ close all
 %instrfind
 %instrreset
 
-N = 10; %number of readings
+N = 10; %number of sample weigths
 measures = zeros(N, 5); %5 positions per every object
 x = zeros(N, 1);
 y = x;

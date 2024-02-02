@@ -5,12 +5,12 @@ close all
 %instrfind
 %instrreset
 
-N = 10; %number of sample weigths
+N = 11; %number of sample weigths
 measures = zeros(N, 5); %5 positions per every object
 x = zeros(N, 1);
 y = x;
 
-s = serial('/dev/cu.usbserial-10', 'BaudRate', 115200);
+s = serial('COM7', 'BaudRate', 115200);
 fopen(s);
 
 while fscanf(s) ~= "Setup done"
@@ -18,11 +18,21 @@ while fscanf(s) ~= "Setup done"
 end
 
 for i = 1 : N
+    fprintf('\n');
     for j = 1 : 5
         if j == 1
             prompt = ['Insert known weight in grams, place the object in the' ...
                 ' middle of the scale and then press enter: '];
-            x(i) = input(prompt);
+            while true
+                T = input(prompt);
+                if (isempty(T)) || ~isnumeric(str2double(T))
+                    disp('error, plese enter a correct value!')
+                else
+                    x(i)=T;
+                    break
+                end
+            end
+            fprintf('\n');
         elseif j == 2
             prompt = ['Place the object in the' ...
                 ' bottom left corner of the scale and then press enter: '];
@@ -40,8 +50,9 @@ for i = 1 : N
                 ' bottom right corner of the scale and then press enter: '];
             input(prompt);
         end
-        fprintf(s, '\n');
-        measures(i, j) = sscanf(fscanf(s), '%f'); %converts the reading in a float number
+        fprintf(s, 'a');
+        measures(i, j) = fscanf(s, '%f'); %converts the reading in a float number
+        fprintf('Serial value: %f\n', measures(i, j));
     end
 end
 

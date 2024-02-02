@@ -157,6 +157,75 @@ If you are interested in recreating this scale project at home, you can easily r
 
 
 
+### Calibration
+
+We are trying to calibrate this scale using an iterative method to find the calibration factor and the offset that minimize the error between the actual weight and the measured weight. To do this, you can use the following formula:
+
+$$
+\text{Actual weight} = \text{Measured weight} \times \text{Cf} + \text{Offset}
+$$
+
+To calculate the error, we can use the following formula:
+
+$$
+\text{Error} = \sum_{i=1}^{n} (\text{Actual weight}_i - \text{Measured weight}_i \times \text{Cf} - \text{Offset})^2
+$$
+
+Where $n$ is the number of weights used in each iteration.
+
+To find the Cf and the Offset that minimize the error, we use the gradient method, which consists of changing the values of Cf and Offset according to the derivative of the error with respect to them, using the following formulas:
+
+$$
+\text{New Cf} = \text{Cf} - \alpha \frac{\partial \text{Error}}{\partial \text{Cf}}
+$$
+
+$$
+\text{New Offset} = \text{Offset} - \alpha \frac{\partial \text{Error}}{\partial \text{Offset}}
+$$
+
+Where $\alpha$ (also called Learning rate) is a parameter that controls the speed of convergence of the method, evaluating a value of $\alpha$ that is small enough to avoid oscillations, but large enough to reach the minimum in a few iterations.
+
+To calculate the partial derivatives of the error, we need to use the following formulas:
+
+$$
+\frac{\partial \text{Error}}{\partial \text{Cf}} = -2 \sum_{i=1}^{n} (\text{Actual weight}_i - \text{Measured weight}_i \times \text{Cf} - \text{Offset}) \times \text{Measured weight}_i
+$$
+
+$$
+\frac{\partial \text{Error}}{\partial \text{Offset}} = -2 \sum_{i=1}^{n} (\text{Actual weight}_i - \text{Measured weight}_i \times \text{Cf} - \text{Offset})
+$$
+
+In reality, for the calculation of Cf and offset, we are using an empirical formula, that is, adding the error with a certain weight to the previously calculated values:
+
+$$
+\text{New Cf} = \text{Cf} - \beta \times \text{Error}
+$$
+
+$$
+\text{New Offset} = \text{Offset} - \beta \times \text{Error}
+$$
+
+Where $\beta$ is a kind of learning rate, suitably tuned to get progressively better results.
+
+## Procedure
+
+Wanting to go through the entire calibration process in depth:
+
+- We prepared 6 iterations, with gradually smaller ranges, using sample weights:
+    - Iteration 0: 0g-100g (10g increment)
+    - Iteration 1: 0g-50g (increment of 5g)
+    - Iteration 2: 0g-5.5g (0.5g increment)
+    - Iteration 3: 0g-2g (0.2g increment)
+    - Iteration 4: 0g-0.5g (increment of 0.05g)
+    - Iteration 5: 0g-0.2g (increment of 0.02g)
+
+- We placed each weight for 5 points of the plate (center and the four corners)
+
+- Using MATLAB, we used a regression algorithm to fit the collected data The slope of the regression line represents the calibration factor and the intercept represents the offset, using the Euclidean norm (norm 2) to evaluate the error.
+
+- Last we used the data calculated by calibration, using it when compiling the microcontroller program.
+
+
 ### Noise
 
 
@@ -165,11 +234,11 @@ If you are interested in recreating this scale project at home, you can easily r
 
 
 
-### Pre Calibration Test (Write)
+### Eccentricity
 
 
 
-### Post Calibration Test (Write)
+### Hysteresis
 
 
 

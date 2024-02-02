@@ -101,6 +101,10 @@ void loop() {
   // Read the change in weight
   units = scale.get_units(10);
 
+  if(abs(units) < 0.05){
+    units = abs(units);
+  }
+
   // Print the change in weight
   Serial.print("Weight: ");
   Serial.print(units,5);

@@ -99,18 +99,18 @@ void setup() {
  */
 void loop() {
   // Read the change in weight
-  units = scale.get_units(20);
+  units = scale.get_units(10);
 
   // Print the change in weight
   Serial.print("Weight: ");
-  Serial.print(units*(-1),5);
+  Serial.print(units,5);
   Serial.println(" grams");
   
   // Print the change in weight on the LCD
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("Weight: ");
-  lcd.print(units*(-1),1);
+  lcd.print(units);
   lcd.print(" g");
   lcd.setCursor(0, 1);
   lcd.print("      ");

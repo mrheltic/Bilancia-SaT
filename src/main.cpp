@@ -58,18 +58,15 @@ void setup() {
   // Initialize LCD
   lcd.init();
   lcd.backlight();
-  Serial.println("LCD initialized");
-  Serial.println("");
+  Serial.println("LCD initialized\n");
 
   // Initialize button
   pinMode(buttonPin, INPUT_PULLUP);
-  Serial.println("Button initialized");
-  Serial.println("");
+  Serial.println("Button initialized\n");
 
   // Initialize library with data output pin, clock input pin and gain factor.
   scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
-  Serial.println("Scale initialized");
-  Serial.println("");
+  Serial.println("Scale initialized\n");
 
   // Raw data reading
   // Serial.print("Read: ");
@@ -91,12 +88,15 @@ void setup() {
 
   // Tare reading
   scale.tare(); //Reset the scale to 0
-  Serial.println("Tare initialized");
-  Serial.println("");
-  Serial.println("Readings:");
-  Serial.println("");
+  Serial.println("Tare initialized\n");
+  Serial.println("Readings:\n");
 }
 
+/**
+ * The main loop function that runs repeatedly in the program.
+ * It reads the change in weight from the scale, prints it to the Serial monitor and LCD,
+ * and performs a tare operation if the button is pressed.
+ */
 void loop() {
   // Read the change in weight
   units = scale.get_units(20);

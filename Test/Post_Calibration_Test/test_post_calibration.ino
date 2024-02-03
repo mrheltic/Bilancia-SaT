@@ -38,7 +38,10 @@ void loop() {
   units = scale.get_units(10);
   if(Serial.available()){
     if(Serial.read() == 'a'){
+      lcd.clear();
       Serial.println(units);
+      lcd.setCursor(0, 0);
+      lcd.print(units);
     }
   }
 }

@@ -1,44 +1,40 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
 {
-  "configurations": [
-    {
-      "name": "windows-gcc-x64",
-      "includePath": [
-        "${workspaceFolder}/**",
-        "C:/Users/Heltic/Documents/PlatformIO/Projects/Bilancia SaT/include",
-        "C:/Users/Heltic/Documents/PlatformIO/Projects/Bilancia SaT/src",
-        "C:/Users/Heltic/.platformio/packages/framework-arduino-avr/cores/arduino",
-        "C:/Users/Heltic/.platformio/packages/framework-arduino-avr/variants/standard",
-        "C:/Users/Heltic/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
-        "C:/Users/Heltic/.platformio/packages/framework-arduino-avr/libraries/HID/src",
-        "C:/Users/Heltic/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
-        "C:/Users/Heltic/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
-        "C:/Users/Heltic/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
-        ""
-      ],
-      "browse": {
-        "limitSymbolsToIncludedHeaders": true,
-        "path": [
-          "C:/Users/vince/OneDrive/Documenti/GitHub/Bilancia-SaT/include",
-          "C:/Users/vince/OneDrive/Documenti/GitHub/Bilancia-SaT/src",
-          ""
-        ]
-      },
-      "defines": [
-        "F_CPU=16000000L",
-        "PLATFORMIO=60113",
-        "ARDUINO_AVR_NANO",
-        "__AVR_ATmega328P__",
-        ""
-      ],
-      "cStandard": "gnu11",
-      "cppStandard": "gnu++11",
-      "compilerPath": "C:/Users/Heltic/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe",
-      "compilerArgs": [
-        "-mmcu=atmega328p",
-        ""
-      ],
-      "intelliSenseMode": "windows-gcc-x64"
-    }
-  ],
-  "version": 4
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "C:/Users/vince/OneDrive/Documenti/GitHub/Bilancia-SaT/include",
+                "C:/Users/vince/OneDrive/Documenti/GitHub/Bilancia-SaT/src",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "C:/Users/vince/OneDrive/Documenti/GitHub/Bilancia-SaT/include",
+                    "C:/Users/vince/OneDrive/Documenti/GitHub/Bilancia-SaT/src",
+                    ""
+                ]
+            },
+            "defines": [
+                "F_CPU=16000000L",
+                "PLATFORMIO=60113",
+                "ARDUINO_AVR_NANO",
+                "__AVR_ATmega328P__",
+                ""
+            ],
+            "cStandard": "gnu11",
+            "cppStandard": "gnu++11",
+            "compilerPath": "C:/Users/vince/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe",
+            "compilerArgs": [
+                "-mmcu=atmega328p",
+                ""
+            ]
+        }
+    ],
+    "version": 4
 }

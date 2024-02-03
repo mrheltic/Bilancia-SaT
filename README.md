@@ -225,6 +225,109 @@ Wanting to go through the entire calibration process in depth:
 
 - Last we used the data calculated by calibration, using it when compiling the microcontroller program.
 
+## MATLAB code
+
+```
+clear the workspace and the screen
+reset the serial devices
+```
+
+```
+set the number of objects
+create a matrix of zeros to store the measures
+create two vectors of zeros to store the weights
+```
+
+```
+create and open a serial connection with the scale
+```
+```
+wait until the scale is ready
+```
+```
+for each object
+    print a new line
+    for each position from 1 to 5
+        if the position is 1 (middle)
+            ask the user to enter the known weight and place the object in the middle
+            validate the input
+            store the known weight in the vector x
+            print a new line
+        else if the position is 2 (bottom left)
+            ask the user to place the object in the bottom left
+        else if the position is 3 (top left)
+            ask the user to place the object in the top left
+        else if the position is 4 (top right)
+            ask the user to place the object in the top right
+        else if the position is 5 (bottom right)
+            ask the user to place the object in the bottom right
+        send a signal to the scale
+        read the measured value from the scale
+        store the measured value in the matrix measures
+        print the measured value
+    end for
+end for
+```
+
+```
+close and delete the serial connection
+reset the serial devices
+```
+```
+for each object
+    calculate the average of the measures for that object
+    store the average in the vector y
+end for
+```
+```
+create a table with the vectors x and y
+save the table as a text file
+save the table as a csv file
+```
+```
+find the coefficients of the best fitting line for the data
+the slope is the calibration factor
+the intercept is the offset
+evaluate the line at the known weights
+compute the error vector
+compute the error norm
+print the error
+```
+```
+create and clear a figure
+plot the data as green circles
+plot the line as a solid line
+```
+
+## Stop condition
+
+For calibration, we have to find the right compromise to make the regression line fit, considering that we have to use a smaller and smaller range of weights until we arrive at a measurement that is not fouled by noise in such a way that the behavior of the scale is no longer linear. We found that up to the third iteration we still have linear behavior, with a larger error than in the second iteration, as the distance between the points and the line increases. Using a smaller range would mean that the measurements are greatly affected by noise, increasing the error as we try to fit a line into a nonlinear set of points.
+
+# Iteration 0
+<img src="Test/Calibration/Calibration Results/figure_0.jpg" alt="Iteration 0">
+
+<img src="Test/Calibration/Calibration Results/workspace_0.png" alt="Workspace 0">
+
+# Iteration 1
+<img src="Test/Calibration/Calibration Results/figure_1.jpg" alt="Iteration 1">
+
+<img src="Test/Calibration/Calibration Results/workspace_1.png" alt="Workspace 1">
+
+# Iteration 2
+<img src="Test/Calibration/Calibration Results/figure_2.jpg" alt="Iteration 2">
+
+<img src="Test/Calibration/Calibration Results/workspace_2.png" alt="Workspace 2">
+
+# Iteration 3
+<img src="Test/Calibration/Calibration Results/figure_3.jpg" alt="Iteration 3">
+
+<img src="Test/Calibration/Calibration Results/workspace_3.png" alt="Workspace 3">
+
+## Results
+
+In truth, already the first iteration returns us a plausible value of Cf, but this can be further improved. The same applies to the offset as well. The best result was achieved at the second iteration, when the range of values is small, but the variations between weights are still appreciable. In addition, we noticed that when the variation falls below 0.5 grams it starts to feel particularly noisy, so the measurements are more degraded. This, counterintuitively gives worse results, and as can be seen from the third iteration, will give a larger error and worse Cf and offset values than those calculated before.
+
+
 
 ### Noise
 

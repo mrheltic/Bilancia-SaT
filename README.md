@@ -400,7 +400,7 @@ A repeatability test is normally performed by repeating the measurement at least
     - mean: 20.02g
     - stdev: 0.0235
 
-<img src="Test/Repeatability/Results/repeatability_results_0.png" alt="figure 0">
+<img src="Test/Repeatability/Results/repeatability_results_1.png" alt="figure 1">
 
 ------
 
@@ -443,13 +443,15 @@ Compute the mean and the standard deviation of the original vector
 
 Eccentricity tests are performed on weighing instruments to measure how the position of the load affects the accuracy and repeatability of the readings. The principle of the test is to compare the indications of the instrument when the same load is applied at different locations on the load receptor. The locations are chosen according to the shape and the number of support points of the load receptor, following the standards OIML R76 and EN 45501. The test load should be at least one third of the maximum capacity of the instrument, and preferably a single load, to ensure the consistency of the center of gravity.
 
-<img src="Test/Post_Calibration_Test/Scale_positions.webp" alt="figure 0">
+<img src="Test/Post_Calibration_Test/Scale_positions.webp" alt="Positions">
 
 -----
 
 The test procedure consists of placing the test load at the center of the load receptor and recording the indication. Then, the load is moved to four other locations, usually at the corners or the edges of the load receptor, and the indications are recorded again. The load is then returned to the center and the indication is checked for any drift. The zero of the instrument may be verified and adjusted between each location, if needed. Alternatively, the instrument may be tared when the load is at the center, to make the differences between locations more visible.
 
 The test is considered passed if the differences between the indications at different locations are within the permissible errors specified by the standards or the manufacturer. The differences are also used to calculate the eccentricity error, which is the maximum deviation of the indication from the arithmetic mean of all indications. The eccentricity error is an important parameter to evaluate the performance and the quality of the weighing instrument.
+
+<img src="Test/Post_Calibration_Test/Results/eccentricity.png" alt="Eccentricity">
 
 ### MATLAB code
 
@@ -487,8 +489,59 @@ Compute the mean and the standard deviation of the original vector
 Save the data in a table with two columns: measured weight and error
 ```
 
+
+
 ## Hysteresis
 
+Hysteresis refers to the difference in a system’s output when a specific input is approached from increasing and decreasing directions. In weighing tests, it’s crucial not to overshoot or undershoot the load to accurately identify hysteresis. The instrument should be calibrated with increasing and decreasing points, approaching each test point with increasing or decreasing weight respectively.
+
+Multiple points throughout the instrument’s measurement range are used to reveal any linearity issues, which means the instrument does not measure equally accurate throughout its range. Even if the zero and full span are correct, there may be errors in the middle of the range, referred to as linearity errors, or non-linearity.
+
+The purpose of a weighing test is to test the calibrated accuracy of the weighing instrument across its entire range, in several steps, with increasing and decreasing weight. Typically, 5 to 10 different loads (test points) are used, and each range must be calibrated separately in multi-range instruments.
+
+### MATLAB code
+
+```
+clear the workspace and the screen
+reset the serial devices
+```
+```
+Set N to 5
+Create a vector of 2*N elements, initialized to zero
+Ask the user to remove any object from the scale
+```
+
+```
+create and open a serial connection with the scale
+```
+```
+wait until the scale is ready
+```
+```
+For each measurement, up to N
+    ask the user to enter the known weight (ascending order)
+    Receive a numeric value from the device
+    Save the value in the vector and print it on the screen
+    Ask the user to remove the object from the scale
+End for
+``` 
+```
+For each measurement, for N+1 up to 2*N
+    ask the user to enter the known weight (descending order)
+    Receive a numeric value from the device
+    Save the value in the vector and print it on the screen
+    Ask the user to remove the object from the scale
+End for
+``` 
+```
+Close and delete the serial connection
+```
+```
+???
+```
+```
+plot the data
+```
 
 
 # Further Improvements

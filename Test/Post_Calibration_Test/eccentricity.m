@@ -5,21 +5,32 @@ close all
 %instrfind
 %instrreset;
 
-N = 5; %number of readings
-measures = zeros(N, 1);
-known_weight = input(['Insert the weight in grams of the object and' ...
-    ' press enter: ']);
+%choose a sample weigth that is as close as possible to the FSR
+measures = zeros(5, 1);
+
+prompt = ['Insert the weight in grams of the object and' ...
+    ' press enter: '];
+while true
+      T = input(prompt);
+      if isnumeric(str2double(T)) && ~isempty(T) && ~isnan(T)
+          known_weigth = T;
+          break
+      else
+          disp('Error, plese enter a correct value!')
+      end
+end
+
 prompt = ['Place the object in the' ...
     ' middle of the scale and then press enter: '];
 
-s = serial('/dev/cu.usbserial-10', 'BaudRate', 115200);
+s = serial('COM12', 'BaudRate', 115200);
 fopen(s);
 
 while fscanf(s) ~= "Setup done"
  
 end
 
-for i = 1 : N
+for i = 1 : 5
     if i == 2
         prompt = ['Place the object in the' ...
             ' bottom left corner of the scale and then press enter: '];
@@ -28,15 +39,15 @@ for i = 1 : N
             ' top left corner of the scale and then press enter: '];
     elseif i == 4
         prompt = ['Place the object in the' ...
-            ' top right corner of the scale and then press enter: '];
+            ' top rigth corner of the scale and then press enter: '];
     elseif i == 5
         prompt = ['Place the object in the' ...
-            ' bottom right corner of the scale and then press enter: '];
+            ' bottom rigth corner of the scale and then press enter: '];
     end
     input(prompt);
-    fprintf(s, '\n');
-    readData = fscanf(s)
-    measures(i) = sscanf(readData, '%f'); %converts the reading in a float number 
+    fprintf(s, 'a');
+    measures(i) = fscanf(s, '%f'); %converts the reading in a float number
+    fprintf('Serial value: %f\n', measures(i));
 end
 
 fclose(s);
@@ -45,7 +56,7 @@ delete(s);
 
 mean = mean(measures);
 standard_deviation = std(measures);
-error = known_weight - measures;
+error = known_weigth - measures;
 
 %save the data:
 T = table(measures, error, 'VariableNames', {'Measured weight', 'Error'});

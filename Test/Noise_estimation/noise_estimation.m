@@ -7,7 +7,7 @@ close all
 N = 100;
 n = zeros(N, 1);
 
-s = serial('/dev/cu.usbserial-10', 'BaudRate', 115200);
+s = serial('COM7', 'BaudRate', 115200);
 fopen(s);
 
 while fscanf(s) ~= "Setup done"
@@ -15,9 +15,9 @@ while fscanf(s) ~= "Setup done"
 end
 
 for i = 1 : N
-    fprintf(s, '\n');
-    readData = fscanf(s);
-    n(i) = sscanf(readData, '%f'); %converts the reading in a float number 
+    fprintf(s, 'a');
+    n(i) = fscanf(s, '%f'); %converts the reading in a float number 
+    fprintf('Serial value: %f\n', n(i));
 end
 
 fclose(s);
@@ -29,7 +29,11 @@ T = table(n, 'VariableNames', {'Noise'});
 writetable(T, 'noise.txt');
 writetable(T, 'noise.csv');
 
-fft(n);
+%dft = fft(n);
+%f = abs(dft(1:100))*2/100;
+%h = 0:1:N-1;
+
+bar(h, f);
 
 mean = mean(n);
 var = std(n);

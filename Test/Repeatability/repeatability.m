@@ -5,6 +5,7 @@ close all
 %instrreset;
 
 N = 5; %at least 5 measures per object should be done
+%Choose a sample weigth that is as close as possible to the FSR
 measures = zeros(N, 1);
 input('Remove any object from the scale. ')
 

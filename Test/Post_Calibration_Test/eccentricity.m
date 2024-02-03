@@ -5,7 +5,7 @@ close all
 %instrfind
 %instrreset;
 
-%choose a sample weigth that is as close as possible to the FSR
+%Choose a sample weigth that is about 1/3 of the FSR
 measures = zeros(5, 1);
 
 prompt = ['Insert the weight in grams of the object and' ...

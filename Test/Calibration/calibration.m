@@ -6,7 +6,7 @@ close all
 %instrreset
 
 N = 11; %number of sample weigths
-measures = zeros(N, 5); %5 positions per every object
+measures = zeros(N, 5); %5 positions per object
 x = zeros(N, 1);
 y = x;
 
@@ -25,11 +25,11 @@ for i = 1 : N
                 ' middle of the scale and then press enter: '];
             while true
                 T = input(prompt);
-                if (isempty(T)) || ~isnumeric(str2double(T))
-                    disp('Error, plese enter a correct value!')
+                if isnumeric(str2double(T)) && ~isempty(T)
+                  x(i) = T;
+                  break
                 else
-                    x(i)=T;
-                    break
+                  disp('Error, plese enter a correct value!')
                 end
             end
             fprintf('\n');

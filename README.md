@@ -14,6 +14,7 @@ This project uses Arduino and various libraries to create a weighing system usin
 ## Top View
 
 <img src="medias/photos/top.jpg" alt="Top View">
+<img src="medias/photos/top2.jpg" alt="Top View with weights">
 
 ## Bottom View
 
@@ -23,6 +24,11 @@ This project uses Arduino and various libraries to create a weighing system usin
 
 <img src="medias/photos/side1.jpg" alt="Side View">
 <img src="medias/photos/side2.jpg" alt="Side View">
+
+## Back View
+
+<img src="medias/photos/back.jpg" alt="Back View">
+<img src="medias/photos/back2.jpg" alt="Back View with battery">
 
 # Components Used
 

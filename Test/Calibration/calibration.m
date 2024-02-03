@@ -26,7 +26,7 @@ for i = 1 : N
             while true
                 T = input(prompt);
                 if (isempty(T)) || ~isnumeric(str2double(T))
-                    disp('error, plese enter a correct value!')
+                    disp('Error, plese enter a correct value!')
                 else
                     x(i)=T;
                     break

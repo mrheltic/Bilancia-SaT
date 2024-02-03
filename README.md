@@ -310,22 +310,30 @@ For calibration, we have to find the right compromise to make the regression lin
 
 <img src="Test/Calibration/Calibration Results/workspace_0.png" alt="Workspace 0">
 
+------
+
 #### Iteration 1
 <img src="Test/Calibration/Calibration Results/figure_1.jpg" alt="Iteration 1">
 
 <img src="Test/Calibration/Calibration Results/workspace_1.png" alt="Workspace 1">
+
+------
 
 #### Iteration 2
 <img src="Test/Calibration/Calibration Results/figure_2.jpg" alt="Iteration 2">
 
 <img src="Test/Calibration/Calibration Results/workspace_2.png" alt="Workspace 2">
 
+------
+
 #### Iteration 3
 <img src="Test/Calibration/Calibration Results/figure_3.jpg" alt="Iteration 3">
 
 <img src="Test/Calibration/Calibration Results/workspace_3.png" alt="Workspace 3">
 
-##### Results
+------
+
+### Results
 
 In truth, already the first iteration returns us a plausible value of Cf, but this can be further improved. The same applies to the offset as well. The best result was achieved at the second iteration, when the range of values is small, but the variations between weights are still appreciable. In addition, we noticed that when the variation falls below 0.5 grams it starts to feel particularly noisy, so the measurements are more degraded. This, counterintuitively gives worse results, and as can be seen from the third iteration, will give a larger error and worse Cf and offset values than those calculated before.
 
@@ -371,11 +379,113 @@ Compute the mean and the standard deviation of the original vector
 
 ## Repeatability
 
+Like any instrument, electronic scales can suffer from repeatability problems. This means that when the same load is measured multiple times, the result is not always exactly the same. To find out the repeatability of the instrument, a repeatability test is performed.
 
+The repeatability test is performed by replacing the same load at the same point on the weighing plane (to avoid any eccentricity error) several times. The test must be performed under identical and constant conditions and with identical handling.
+
+The calibration weight used should have a size as close as possible to the maximum range of the instrument. Often a repeatability test is performed with a single load, but it can also be performed with different load values, separately.
+
+A repeatability test is normally performed by repeating the measurement at least 5 times in a row. We did two tests:
+
+- 20g
+    - mean: 99.97g
+    - stdev: 0.0141
+    
+
+<img src="Test/Repeatability/Results/repeatability_results_0.png" alt="figure 0">
+
+------
+
+- 100g
+    - mean: 20.02g
+    - stdev: 0.0235
+
+<img src="Test/Repeatability/Results/repeatability_results_0.png" alt="figure 0">
+
+------
+
+In the repeatability test, the instrument is first zeroed, then the load is placed on the plate and the indication is recorded once stabilized. Then the load is removed and the zero indication is checked and zeroed if necessary. Then the load is replaced and so on. For a scale with multiple fields / divisions, a test weight below the first range should be sufficient.
+
+### MATLAB code
+
+```
+clear the workspace and the screen
+reset the serial devices
+```
+```
+Set N to 5
+Create a vector of N elements, initialized to zero
+Ask the user to remove any object from the scale
+```
+
+```
+create and open a serial connection with the scale
+```
+```
+wait until the scale is ready
+```
+```
+For each element of the vector
+    Ask the user to place the object on the scale
+    Receive a numeric value from the device
+    Save the value in the vector and print it on the screen
+    Ask the user to remove the object from the scale
+End for
+```
+```
+Close and delete the serial connection
+```
+```
+Compute the mean and the standard deviation of the original vector
+```
 
 ## Eccentricity
 
+Eccentricity tests are performed on weighing instruments to measure how the position of the load affects the accuracy and repeatability of the readings. The principle of the test is to compare the indications of the instrument when the same load is applied at different locations on the load receptor. The locations are chosen according to the shape and the number of support points of the load receptor, following the standards OIML R76 and EN 45501. The test load should be at least one third of the maximum capacity of the instrument, and preferably a single load, to ensure the consistency of the center of gravity.
 
+<img src="Test/Post_Calibration_Test/Scale_positions.webp" alt="figure 0">
+
+-----
+
+The test procedure consists of placing the test load at the center of the load receptor and recording the indication. Then, the load is moved to four other locations, usually at the corners or the edges of the load receptor, and the indications are recorded again. The load is then returned to the center and the indication is checked for any drift. The zero of the instrument may be verified and adjusted between each location, if needed. Alternatively, the instrument may be tared when the load is at the center, to make the differences between locations more visible.
+
+The test is considered passed if the differences between the indications at different locations are within the permissible errors specified by the standards or the manufacturer. The differences are also used to calculate the eccentricity error, which is the maximum deviation of the indication from the arithmetic mean of all indications. The eccentricity error is an important parameter to evaluate the performance and the quality of the weighing instrument.
+
+### MATLAB code
+
+```
+clear the workspace and the screen
+reset the serial devices
+```
+```
+Set N to 5
+Create a vector of N elements, initialized to zero
+Ask the user to remove any object from the scale
+```
+
+```
+create and open a serial connection with the scale
+```
+```
+wait until the scale is ready
+```
+```
+For each position of the scale
+    Ask the user to place the object on the scale
+    Receive a numeric value from the device
+    Save the value in the vector and print it on the screen
+    Ask the user to remove the object from the scale
+End for
+``` 
+```
+Close and delete the serial connection
+```
+```
+Compute the mean and the standard deviation of the original vector
+```
+```
+Save the data in a table with two columns: measured weight and error
+```
 
 ## Hysteresis
 

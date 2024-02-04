@@ -473,14 +473,14 @@ A repeatability test is normally performed by repeating the measurement at least
     <td align="center">
       <img src="Test/Repeatability/Results/repeatability_results_0.png" width=500 alt="figure 0">
       <p><b>100g</b></p>
-      <p>mean: 20.02g</p>
-      <p>stdev: 0.0235</p>
+      <p>mean: 99.97g</p>
+      <p>stdev: 0.00141</p>
     </td>
     <td align="center">
       <img src="Test/Repeatability/Results/repeatability_results_1.png"width=500 alt="figure 1">
       <p><b>20g</b></p>
-      <p>mean: 99.97g</p>
-      <p>stdev: 0.0141</p>
+      <p>mean: 20.02g</p>
+      <p>stdev: 0.0235</p>
     </td>
   </tr>
 </table>

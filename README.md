@@ -247,7 +247,7 @@ Wanting to go through the entire calibration process in depth:
 
 - Last we used the data calculated by calibration, using it when compiling the microcontroller program.
 
-### MATLAB code
+### MATLAB pseudocode - Calibration
 
 ```
 clear the workspace and the screen
@@ -430,7 +430,7 @@ We then analyzed the data using Matlab. We calculated the mean and the standard 
 
 The results of the noise test are shown below. The mean of the vector n is 0.12 g and the standard deviation is 0.07 g. This means that the balance has a very low noise level and a high accuracy. The frequency spectrum of the vector n shows that the noise is mostly random and does not have any significant peaks. This means that the balance is stable and does not suffer from any periodic disturbances.
 
-### MATLAB code
+### MATLAB pseudocode - Noise
 
 ```
 clear the workspace and the screen
@@ -492,7 +492,7 @@ A repeatability test is normally performed by repeating the measurement at least
 
 In the repeatability test, the instrument is first zeroed, then the load is placed on the plate and the indication is recorded once stabilized. Then the load is removed and the zero indication is checked and zeroed if necessary. Then the load is replaced and so on. For a scale with multiple fields / divisions, a test weight below the first range should be sufficient.
 
-### MATLAB code
+### MATLAB pseudocode - Repeatability
 
 ```
 clear the workspace and the screen
@@ -554,7 +554,7 @@ The test procedure consists of placing the test load at the center of the load r
 
 
 
-### MATLAB code
+### MATLAB pseudocode - Eccentricity
 
 ```
 clear the workspace and the screen
@@ -600,7 +600,7 @@ Multiple points throughout the instrument’s measurement range are used to reve
 
 The purpose of a weighing test is to test the calibrated accuracy of the weighing instrument across its entire range, in several steps, with increasing and decreasing weight. Typically, 5 to 10 different loads (test points) are used, and each range must be calibrated separately in multi-range instruments.
 
-### MATLAB code
+### MATLAB pseudocode - Hysteresis
 
 ```
 clear the workspace and the screen

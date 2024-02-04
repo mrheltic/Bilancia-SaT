@@ -81,7 +81,9 @@ The PCB (Printed Circuit Board) is used to connect and organize the electronic c
 
 ## Rubber supports
 
-<img src="medias/parts/rubber_support.jpg" width=50% height=50% alt="Rubber support">
+<p align=center>
+  <img src="medias/parts/rubber_support.jpg" width=50% height=50% alt="Rubber support">
+<p>
 
 # Wiring
 The components are wired as follows:
@@ -323,7 +325,7 @@ plot the line as a solid line
 
 For calibration, we have to find the right compromise to make the regression line fit, considering that we have to use a smaller and smaller range of weights until we arrive at a measurement that is not fouled by noise in such a way that the behavior of the scale is no longer linear. We found that up to the third iteration we still have linear behavior, with a larger error than in the second iteration, as the distance between the points and the line increases. Using a smaller range would mean that the measurements are greatly affected by noise, increasing the error as we try to fit a line into a nonlinear set of points.
 
-#### Iteration 0
+#### Iteration n. 0
 
 <table border="0">
   <tr>
@@ -339,7 +341,7 @@ For calibration, we have to find the right compromise to make the regression lin
 
 ------
 
-#### Iteration 1
+#### Iteration n. 1
 
 <table border="0">
   <tr>
@@ -357,7 +359,7 @@ For calibration, we have to find the right compromise to make the regression lin
 
 ------
 
-#### Iteration 2
+#### Iteration n. 2
 
 <table border="0">
   <tr>
@@ -375,7 +377,7 @@ For calibration, we have to find the right compromise to make the regression lin
 
 ------
 
-#### Iteration 3
+#### Iteration n. 3
 
 <table border="0">
   <tr>
@@ -393,7 +395,7 @@ For calibration, we have to find the right compromise to make the regression lin
 
 ------
 
-#### Iteration 4
+#### Iteration n. 4
 
 <table border="0">
   <tr>

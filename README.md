@@ -82,7 +82,7 @@ The PCB (Printed Circuit Board) is used to connect and organize the electronic c
 ## Rubber supports
 
 <p align=center>
-  <img src="medias/parts/rubber_support1.jpg" width=50% height=50% alt="Rubber support">
+  <img src="medias/parts/rubber_support.jpg" width=50% height=50% alt="Rubber support">
 <p>
 
 # Wiring

@@ -147,13 +147,17 @@ We have designed and printed several key parts for the scale, including:
 
 <img src="medias/printed_part/place_load_cell.png" alt="Platform1">
 
-- **Alternative version of the platform**: where the objects to be weighed are placed, with no screws in sigth
+- **Alternative version of the Platform**: where the objects to be weighed are placed, with no screws in sight.
 
 <img src="medias/printed_part/place_load_cell_alternative.png" alt="Platform2">
 
 - **Load Cell Support**: securely holds the load cell in place.
 
 <img src="medias/printed_part/support_load_cell.png" alt="Support">
+
+- **Battery Cover**: to hide and protect the battery.
+
+<img src="medias/printed_part/battery_cover_load_cell.png" alt="Battery">
 
 - **Body**: provides support to all the components and gives an aesthetically pleasing appearance.
 

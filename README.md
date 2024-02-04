@@ -161,7 +161,7 @@ We have designed and printed several key parts for the scale, including:
 
 - **Body**: provides support to all the components and gives an aesthetically pleasing appearance.
 
-<img src="medias/printed_part/body_load_cell1.png" alt="Body">
+<img src="medias/printed_part/body_load_cell.png" alt="Body">
 
 These 3D-printed parts have been carefully designed to ensure proper functionality and compatibility with the electronic components used in the project.
 

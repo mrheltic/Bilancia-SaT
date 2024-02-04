@@ -1,4 +1,4 @@
-# Bilancia SaT
+# Bilancia SaT - Gruppo 04
 
 This project uses Arduino and various libraries to create a weighing system using an HX711 load cell amplifier, an LCD display, and a tare button. The program continuously reads the change in weight and displays it on both the Serial Monitor and the LCD screen. We also implemented a tare button to reset the scale to zero when needed.
 

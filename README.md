@@ -5,7 +5,6 @@ This project uses Arduino and various libraries to create a weighing system usin
 ## Example
 
 <img src="medias/photos/test1.jpg" alt="Example">
-<img src="medias/photos/test2.jpg" alt="Example">
 
 ## Front View
 

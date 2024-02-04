@@ -28,8 +28,8 @@ void setup() {
   // Initialize library with data output pin, clock input pin and gain factor.
   scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
 
-  scale.set_offset(-37080.35186363634); 
-  scale.set_scale(450.9137756192465432);
+  scale.set_offset(4294929923); 
+  scale.set_scale(450.622436);
   scale.tare(20);
 
   Serial.print("Setup done");

@@ -10,7 +10,7 @@ measures = zeros(N, 5); %5 positions per object
 x = zeros(N, 1);
 y = x;
 
-s = serial('COM7', 'BaudRate', 115200);
+s = serial('COM12', 'BaudRate', 115200);
 fopen(s);
 
 while fscanf(s) ~= "Setup done"

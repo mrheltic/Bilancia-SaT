@@ -8,7 +8,11 @@ N = 5; %number of readings
 measures = zeros(2*N, 1);
 x = measures;
 
+<<<<<<< HEAD
 s = serial('COM12', 'BaudRate', 115200);
+=======
+s = serial('/dev/cu.usbserial-110', 'BaudRate', 115200);
+>>>>>>> 9e51e6668c2561d67ad62db9130715a009b0cddb
 fopen(s);
 
 while fscanf(s) ~= "Setup done"
@@ -61,4 +65,8 @@ legend('Data', 'Resulting line')
 legend();
 
 %Non-linearity:
+<<<<<<< HEAD
 non_linearity = ascending' - fliplr(descending');
+=======
+non_linearity = ascending' - fliplr(descending');
+>>>>>>> 9e51e6668c2561d67ad62db9130715a009b0cddb

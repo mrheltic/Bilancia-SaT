@@ -142,25 +142,30 @@ This project involves the creation of a scale using a combination of 3D-printed 
 
 We have designed and printed several key parts for the scale, including:
 
-- **Platform**: where the objects to be weighed are placed.
+<table border="0">
+  <tr >
+    <td><img src="medias/printed_part/place_load_cell.png" width="300" alt="Platform"></td>
+    <td><p> <b>Alternative version of the Platform</b>: where the objects to be weighed are placed, with no screws in sight.</p></td>
+  </tr>
+  <tr>
+    <td><img src="medias/printed_part/place_load_cell_alternative.png" width="300" alt="Alternative Platform"></td>
+    <td><p><b>Platform</b>: where the objects to be weighed are placed.</p></td>
+  </tr>
+  <tr>
+    <td><img src="medias/printed_part/support_load_cell.png" width="300" alt="Support"></td>
+    <td><p><b>Load Cell Support</b>: securely holds the load cell in place.</p></td>
+  </tr>
+  <tr>
+    <td><img src="medias/printed_part/battery_cover_load_cell.png" width="300" alt="Battery"></td>
+    <td><p><b>Battery Cover</b>: to hide and protect the battery.</p></td>
+  </tr>
+  <tr>
+    <td><img src="medias/printed_part/body_load_cell.png" width="300" alt="Body"></td>
+    <td><p><b>Body</b>: provides support to all the components and gives an aesthetically pleasing appearance.</p></td>
+  </tr>
+</table>
 
-<img src="medias/printed_part/place_load_cell.png" alt="Platform">
-
-- **Alternative version of the Platform**: where the objects to be weighed are placed, with no screws in sight.
-
-<img src="medias/printed_part/place_load_cell_alternative.png" alt="Alternative Platform">
-
-- **Load Cell Support**: securely holds the load cell in place.
-
-<img src="medias/printed_part/support_load_cell.png" alt="Support">
-
-- **Battery Cover**: to hide and protect the battery.
-
-<img src="medias/printed_part/battery_cover_load_cell.png" alt="Battery">
-
-- **Body**: provides support to all the components and gives an aesthetically pleasing appearance.
-
-<img src="medias/printed_part/body_load_cell.png" alt="Body">
+-----
 
 These 3D-printed parts have been carefully designed to ensure proper functionality and compatibility with the electronic components used in the project.
 

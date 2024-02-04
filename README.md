@@ -145,7 +145,11 @@ We have designed and printed several key parts for the scale, including:
 
 - **Platform**: where the objects to be weighed are placed.
 
-<img src="medias/printed_part/place_load_cell.png" alt="Platform">
+<img src="medias/printed_part/place_load_cell.png" alt="Platform1">
+
+- **Alternative version of the platform**: where the objects to be weighed are placed, with no screws in sigth
+
+<img src="medias/printed_part/place_load_cell_alternative.png" alt="Platform2">
 
 - **Load Cell Support**: securely holds the load cell in place.
 

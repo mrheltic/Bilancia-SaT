@@ -641,6 +641,9 @@ Close and delete the serial connection
 plot the data
 ```
 
+> [!NOTE]
+> Try not to keep it turned on for a very long time, since it may lose precision due to the heating of the components.
+
 
 # Further Improvements
 - You can modify the calibration factor (`calibration_factor`) to adjust the scale according to your specific load cell and measurement requirements.

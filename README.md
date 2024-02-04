@@ -177,7 +177,7 @@ If you are interested in recreating this scale project at home, you can easily r
 
 # Test
 
-<img src="medias/parts/sample_weights.jpg" alt="Sample Weights">
+<img src="medias/parts/sample_weights.jpg" width=50% height=50% alt="Sample Weights">
 
 ## Calibration
 

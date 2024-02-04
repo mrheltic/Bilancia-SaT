@@ -339,6 +339,16 @@ For calibration, we have to find the right compromise to make the regression lin
 
 ------
 
+#### Iteration 4
+<img src="Test/Calibration/Calibration Results/figure_4.jpg" alt="Iteration 4">
+
+<img src="Test/Calibration/Calibration Results/workspace_4.png" alt="Workspace 4">
+
+> [!NOTE]
+> In this graph, it can be seen that variations on the order of hundredths of a gram are not appreciable, as the noise mat is of the same order of magnitude, so it makes the regression results much worse when calculating Cf and offset
+
+------
+
 ### Results
 
 In truth, already the first iteration returns us a plausible value of Cf, but this can be further improved. The same applies to the offset as well. The best result was achieved at the second iteration, when the range of values is small, but the variations between weights are still appreciable. In addition, we noticed that when the variation falls below 0.5 grams it starts to feel particularly noisy, so the measurements are more degraded. This, counterintuitively gives worse results, and as can be seen from the third iteration, will give a larger error and worse Cf and offset values than those calculated before.

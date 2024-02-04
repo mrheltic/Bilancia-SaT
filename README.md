@@ -319,37 +319,90 @@ plot the line as a solid line
 For calibration, we have to find the right compromise to make the regression line fit, considering that we have to use a smaller and smaller range of weights until we arrive at a measurement that is not fouled by noise in such a way that the behavior of the scale is no longer linear. We found that up to the third iteration we still have linear behavior, with a larger error than in the second iteration, as the distance between the points and the line increases. Using a smaller range would mean that the measurements are greatly affected by noise, increasing the error as we try to fit a line into a nonlinear set of points.
 
 #### Iteration 0
-<img src="Test/Calibration/Calibration Results/figure_0.jpg" alt="Iteration 0">
 
-<img src="Test/Calibration/Calibration Results/workspace_0.png" alt="Workspace 0">
+<table>
+  <tr>
+    <td align="center">
+      <img src="Test/Calibration/Calibration Results/figure_0.jpg" width=500 alt="Iteration 0">
+    </td>
+    <td align="center">
+      <img src="Test/Calibration/Calibration Results/workspace_0.png" width=360 alt="Workspace 0">
+    </td>
+  </tr>
+</table>
+
 
 ------
 
 #### Iteration 1
-<img src="Test/Calibration/Calibration Results/figure_1.jpg" alt="Iteration 1">
 
-<img src="Test/Calibration/Calibration Results/workspace_1.png" alt="Workspace 1">
+<table>
+  <tr>
+    <td align="center">
+      <img src="Test/Calibration/Calibration Results/figure_1.jpg" width=500 alt="Iteration 1">
+    </td>
+    <td align="center">
+      <img src="Test/Calibration/Calibration Results/workspace_1.png" width=330 alt="Workspace 1">
+    </td>
+  </tr>
+</table>
+
+
+
 
 ------
 
 #### Iteration 2
-<img src="Test/Calibration/Calibration Results/figure_2.jpg" alt="Iteration 2">
 
-<img src="Test/Calibration/Calibration Results/workspace_2.png" alt="Workspace 2">
+<table>
+  <tr>
+    <td align="center">
+      <img src="Test/Calibration/Calibration Results/figure_2.jpg" width=500 alt="Iteration 2">
+    </td>
+    <td align="center">
+      <img src="Test/Calibration/Calibration Results/workspace_2.png" width=390 alt="Workspace 2">
+    </td>
+  </tr>
+</table>
+
+
+
 
 ------
 
 #### Iteration 3
-<img src="Test/Calibration/Calibration Results/figure_3.jpg" alt="Iteration 3">
 
-<img src="Test/Calibration/Calibration Results/workspace_3.png" alt="Workspace 3">
+<table>
+  <tr>
+    <td align="center">
+      <img src="Test/Calibration/Calibration Results/figure_3.jpg" width=500 alt="Iteration 3">
+    </td>
+    <td align="center">
+      <img src="Test/Calibration/Calibration Results/workspace_3.png" width=340 alt="Workspace 3">
+    </td>
+  </tr>
+</table>
+
+
+
 
 ------
 
 #### Iteration 4
-<img src="Test/Calibration/Calibration Results/figure_4.jpg" alt="Iteration 4">
 
-<img src="Test/Calibration/Calibration Results/workspace_4.png" alt="Workspace 4">
+<table>
+  <tr>
+    <td align="center">
+      <img src="Test/Calibration/Calibration Results/figure_4.jpg" width=500 alt="Iteration 4">
+    </td>
+    <td align="center">
+      <img src="Test/Calibration/Calibration Results/workspace_4.png" width=340 alt="Workspace 4">
+    </td>
+  </tr>
+</table>
+
+
+
 
 > [!NOTE]
 > In this graph, it can be seen that variations on the order of hundredths of a gram are not appreciable, as the noise mat is of the same order of magnitude, so it makes the regression results much worse when calculating Cf and offset. Taken this into account, the 5th iteration wouldn't have much meaning.
@@ -410,20 +463,23 @@ The calibration weight used should have a size as close as possible to the maxim
 
 A repeatability test is normally performed by repeating the measurement at least 5 times in a row. We did two tests:
 
-- 20g
-    - mean: 99.97g
-    - stdev: 0.0141
-    
+<table>
+  <tr>
+    <td align="center">
+      <img src="Test/Repeatability/Results/repeatability_results_0.png" width=500 alt="figure 0">
+      <p><b>100g</b></p>
+      <p>mean: 20.02g</p>
+      <p>stdev: 0.0235</p>
+    </td>
+    <td align="center">
+      <img src="Test/Repeatability/Results/repeatability_results_1.png"width=500 alt="figure 1">
+      <p><b>20g</b></p>
+      <p>mean: 99.97g</p>
+      <p>stdev: 0.0141</p>
+    </td>
+  </tr>
+</table>
 
-<img src="Test/Repeatability/Results/repeatability_results_0.png" alt="figure 0">
-
-------
-
-- 100g
-    - mean: 20.02g
-    - stdev: 0.0235
-
-<img src="Test/Repeatability/Results/repeatability_results_1.png" alt="figure 1">
 
 ------
 
@@ -466,15 +522,30 @@ Compute the mean and the standard deviation of the original vector
 
 Eccentricity tests are performed on weighing instruments to measure how the position of the load affects the accuracy and repeatability of the readings. The principle of the test is to compare the indications of the instrument when the same load is applied at different locations on the load receptor. The locations are chosen according to the shape and the number of support points of the load receptor, following the standards OIML R76 and EN 45501. The test load should be at least one third of the maximum capacity of the instrument, and preferably a single load, to ensure the consistency of the center of gravity.
 
+<p align=center>
 <img src="Test/Post_Calibration_Test/Scale_positions.webp" alt="Positions">
-
------
+</p>
 
 The test procedure consists of placing the test load at the center of the load receptor and recording the indication. Then, the load is moved to four other locations, usually at the corners or the edges of the load receptor, and the indications are recorded again. The load is then returned to the center and the indication is checked for any drift. The zero of the instrument may be verified and adjusted between each location, if needed. Alternatively, the instrument may be tared when the load is at the center, to make the differences between locations more visible.
 
-The test is considered passed if the differences between the indications at different locations are within the permissible errors specified by the standards or the manufacturer. The differences are also used to calculate the eccentricity error, which is the maximum deviation of the indication from the arithmetic mean of all indications. The eccentricity error is an important parameter to evaluate the performance and the quality of the weighing instrument.
+<table>
+  <tr>
+    <td >
+      <img src="Test/Post_Calibration_Test/Results/eccentricity.png" width=2000 alt="Eccentricity">
+    </td>
+    <td>
+      <p>
+      The test is considered passed if the differences between the indications at different locations are within the permissible errors specified by the standards or the manufacturer. The differences are also used to calculate the eccentricity error, which is the maximum deviation of the indication from the arithmetic mean of all indications. The eccentricity error is an important parameter to evaluate the performance and the quality of the weighing instrument.
+      </p>
+    </td>
+  </tr>
+</table>
 
-<img src="Test/Post_Calibration_Test/Results/eccentricity.png" alt="Eccentricity">
+
+
+
+
+
 
 ### MATLAB code
 
@@ -566,8 +637,12 @@ plot the data
 
 # Further Improvements
 - You can modify the calibration factor (`calibration_factor`) to adjust the scale according to your specific load cell and measurement requirements.
-- By using the purple hx711, that has bigger and more separated tracks, it is possible to benefit from an improvement in terms of precision, since the entity of the disturbances is smaller.
-  <img src="medias/parts/purple_hx711.jpg" alt="Purple Hx711">
+- By using the purple hx711, that has bigger and more separated tracks, it is possible to benefit from an improvement in terms of precision, since the entity of the disturbances is smaller. 
+
+<p align=center>
+ <img src="medias/parts/purple_hx711.jpg" width=50% height=50% alt="Purple Hx711">
+<p>
+
 - The program can be extended to support different measurement units by adding appropriate conversions and displaying the result in the desired unit on the LCD screen.
 - Error handling and validation can be implemented to handle exceptional cases, such as when the load cell is not connected or when the measurements are out of range, making them block the execution of the entire program.
 - You can compile this code to run also on other boards that are better for 3D printed cases (actually tested on Arduino Uno, ESP8266)

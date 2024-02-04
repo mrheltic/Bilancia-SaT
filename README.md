@@ -320,7 +320,7 @@ For calibration, we have to find the right compromise to make the regression lin
 
 #### Iteration 0
 
-<table>
+<table border="0">
   <tr>
     <td align="center">
       <img src="Test/Calibration/Calibration Results/figure_0.jpg" width=500 alt="Iteration 0">
@@ -336,7 +336,7 @@ For calibration, we have to find the right compromise to make the regression lin
 
 #### Iteration 1
 
-<table>
+<table border="0">
   <tr>
     <td align="center">
       <img src="Test/Calibration/Calibration Results/figure_1.jpg" width=500 alt="Iteration 1">
@@ -354,7 +354,7 @@ For calibration, we have to find the right compromise to make the regression lin
 
 #### Iteration 2
 
-<table>
+<table border="0">
   <tr>
     <td align="center">
       <img src="Test/Calibration/Calibration Results/figure_2.jpg" width=500 alt="Iteration 2">
@@ -372,7 +372,7 @@ For calibration, we have to find the right compromise to make the regression lin
 
 #### Iteration 3
 
-<table>
+<table border="0">
   <tr>
     <td align="center">
       <img src="Test/Calibration/Calibration Results/figure_3.jpg" width=500 alt="Iteration 3">
@@ -390,7 +390,7 @@ For calibration, we have to find the right compromise to make the regression lin
 
 #### Iteration 4
 
-<table>
+<table border="0">
   <tr>
     <td align="center">
       <img src="Test/Calibration/Calibration Results/figure_4.jpg" width=500 alt="Iteration 4">

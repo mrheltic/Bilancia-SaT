@@ -81,7 +81,7 @@ The PCB (Printed Circuit Board) is used to connect and organize the electronic c
 
 ## Rubber supports
 
-<img src="medias/parts/rubber_support.jpg" alt="Rubber support">
+<img src="medias/parts/rubber_support.jpg" width=50% height=50% alt="Rubber support">
 
 # Wiring
 The components are wired as follows:
@@ -474,7 +474,7 @@ A repeatability test is normally performed by repeating the measurement at least
       <img src="Test/Repeatability/Results/repeatability_results_0.png" width=500 alt="figure 0">
       <p><b>100g</b></p>
       <p>mean: 99.97g</p>
-      <p>stdev: 0.00141</p>
+      <p>stdev: 0.0141</p>
     </td>
     <td align="center">
       <img src="Test/Repeatability/Results/repeatability_results_1.png"width=500 alt="figure 1">

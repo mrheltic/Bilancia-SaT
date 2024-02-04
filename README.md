@@ -345,7 +345,7 @@ For calibration, we have to find the right compromise to make the regression lin
 <img src="Test/Calibration/Calibration Results/workspace_4.png" alt="Workspace 4">
 
 > [!NOTE]
-> In this graph, it can be seen that variations on the order of hundredths of a gram are not appreciable, as the noise mat is of the same order of magnitude, so it makes the regression results much worse when calculating Cf and offset
+> In this graph, it can be seen that variations on the order of hundredths of a gram are not appreciable, as the noise mat is of the same order of magnitude, so it makes the regression results much worse when calculating Cf and offset. Taken this into account, the 5th iteration wouldn't have much meaning.
 
 ------
 

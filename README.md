@@ -561,9 +561,6 @@ End for
 Close and delete the serial connection
 ```
 ```
-???
-```
-```
 plot the data
 ```
 

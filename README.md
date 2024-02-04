@@ -145,11 +145,11 @@ We have designed and printed several key parts for the scale, including:
 <table border="0">
   <tr >
     <td><img src="medias/printed_part/place_load_cell.png" width="300" alt="Platform"></td>
-    <td><p> <b>Alternative version of the Platform</b>: where the objects to be weighed are placed, with no screws in sight.</p></td>
+    <td><p><b>Platform</b>: where the objects to be weighed are placed.</p></td>
   </tr>
   <tr>
     <td><img src="medias/printed_part/place_load_cell_alternative.png" width="300" alt="Alternative Platform"></td>
-    <td><p><b>Platform</b>: where the objects to be weighed are placed.</p></td>
+    <td><p> <b>Alternative version of the Platform</b>: where the objects to be weighed are placed, with no screws in sight.</p></td>
   </tr>
   <tr>
     <td><img src="medias/printed_part/support_load_cell.png" width="300" alt="Support"></td>

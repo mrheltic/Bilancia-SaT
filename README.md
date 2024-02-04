@@ -60,7 +60,7 @@ The ON-OFF switch is used to control the power supply to the circuit.
 
 <img src="medias/parts/board.jpg" alt="Board">
 
-The ATtiny or Arduino Nano is a microcontroller development board used for programming and controlling the scale and its components.
+The ATtiny or Arduino Nano are some examples of a microcontroller development board used for programming and controlling the scale and its components.
 
 ## 5KG Load Cell
 

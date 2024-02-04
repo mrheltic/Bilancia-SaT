@@ -145,11 +145,11 @@ We have designed and printed several key parts for the scale, including:
 
 - **Platform**: where the objects to be weighed are placed.
 
-<img src="medias/printed_part/place_load_cell.png" alt="Platform1">
+<img src="medias/printed_part/place_load_cell.png" alt="Platform">
 
 - **Alternative version of the Platform**: where the objects to be weighed are placed, with no screws in sight.
 
-<img src="medias/printed_part/place_load_cell_alternative.png" alt="Platform2">
+<img src="medias/printed_part/place_load_cell_alternative.png" alt="Alternative Platform">
 
 - **Load Cell Support**: securely holds the load cell in place.
 
@@ -571,7 +571,7 @@ plot the data
 # Further Improvements
 - You can modify the calibration factor (`calibration_factor`) to adjust the scale according to your specific load cell and measurement requirements.
 - By using the purple hx711, that has bigger and more separated tracks, it is possible to benefit from an improvement in terms of precision, since the entity of the disturbances is smaller.
-  <img src="Test/Calibration/Calibration Results/figure_0.jpg" alt="Iteration 0">
+  <img src="medias/parts/purple_hx711.jpg" alt="Purple Hx711">
 - The program can be extended to support different measurement units by adding appropriate conversions and displaying the result in the desired unit on the LCD screen.
 - Error handling and validation can be implemented to handle exceptional cases, such as when the load cell is not connected or when the measurements are out of range, making them block the execution of the entire program.
 - You can compile this code to run also on other boards that are better for 3D printed cases (actually tested on Arduino Uno, ESP8266)

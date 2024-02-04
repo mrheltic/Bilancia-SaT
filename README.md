@@ -572,5 +572,9 @@ plot the data
 - Error handling and validation can be implemented to handle exceptional cases, such as when the load cell is not connected or when the measurements are out of range, making them block the execution of the entire program.
 - You can compile this code to run also on other boards that are better for 3D printed cases (actually tested on Arduino Uno, ESP8266)
 
+# Repo Activity
+
+![Alt](https://repobeats.axiom.co/api/embed/f3d6ec1982eabb00ef2cd97b2e32604395480e7e.svg "Repobeats analytics image")
+
 # License
 This project is licensed under the GPLv3 license.

@@ -10,6 +10,10 @@ This project uses Arduino and various libraries to create a weighing system usin
 
 
 
+https://github.com/mrheltic/Bilancia-SaT/assets/25135341/8b41f5b5-bcb0-4e01-b5df-058aa0fdd161
+
+
+
 ## Front View
 
 <img src="medias/photos/front.jpg" alt="Front View">

@@ -207,12 +207,15 @@ Where $\beta$ is a kind of learning rate, suitably tuned to get progressively be
 Wanting to go through the entire calibration process in depth:
 
 - We prepared 6 iterations, with gradually smaller ranges, using sample weights:
-    - Iteration 0: 0g-100g (10g increment)
-    - Iteration 1: 0g-50g (increment of 5g)
-    - Iteration 2: 0g-5.5g (0.5g increment)
-    - Iteration 3: 0g-2g (0.2g increment)
-    - Iteration 4: 0g-0.5g (increment of 0.05g)
-    - Iteration 5: 0g-0.2g (increment of 0.02g)
+
+| Iteration | Range | Increment |
+|:---------:|:-----:|:---------:|
+|     0     | 0g-100g | 10g |
+|     1     | 0g-50g | 5g |
+|     2     | 0g-5.5g | 0.5g |
+|     3     | 0g-2g | 0.2g |
+|     4     | 0g-0.5g | 0.05g |
+|     5     | 0g-0.2g | 0.02g |
 
 - We placed each weight for 5 points of the plate (center and the four corners)
 

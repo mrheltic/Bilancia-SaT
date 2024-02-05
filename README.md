@@ -37,30 +37,22 @@ This project uses Arduino and various libraries to create a weighing system usin
 
 <table>
   <tr>
-    <td><img src="medias/parts/9v_battery.jpg" alt="9V Battery" width="200"></td>
-    <td><strong>Battery 9V</strong><br>The 9V battery is used as a portable power source for the project.</td>
-    <td><img src="medias/parts/touch_sensor.jpg" alt="Touch button" width="200"></td>
-    <td><strong>Touch Button (HW-139)</strong><br>The HW-139 touch button is a component used for touch detection. It can be used as a tare button for resetting the scale.</td>
-    <td><img src="medias/parts/i2c_Screen.jpg" alt="16x2 Screen" width="200"></td>
-    <td><strong>I2C 16x2 LCD Display</strong><br>The I2C 16x2 LCD display is used to show information such as the measured weight or other relevant details.</td>
+    <td><img src="medias/parts/9v_battery.jpg" alt="9V Battery" width="200"><br><strong>Battery 9V</strong><br>The 9V battery is used as a portable power source for the project.</td>
+    <td><img src="medias/parts/touch_sensor.jpg" alt="Touch button" width="200"><br><strong>Touch Button (HW-139)</strong><br>The HW-139 touch button is a component used for touch detection. It can be used as a tare button for resetting the scale.</td>
+    <td><img src="medias/parts/i2c_Screen.jpg" alt="16x2 Screen" width="200"><br><strong>I2C 16x2 LCD Display</strong><br>The I2C 16x2 LCD display is used to show information such as the measured weight or other relevant details.</td>
   </tr>
   <tr>
-    <td><img src="medias/parts/on_off_switch.jpg" alt="Switch" width="200"></td>
-    <td><strong>ON-OFF Switch</strong><br>The ON-OFF switch is used to control the power supply to the circuit.</td>
-    <td><img src="medias/parts/board.jpg" alt="Board" width="200"></td>
-    <td><strong>ATtiny or Arduino Nano</strong><br>The ATtiny or Arduino Nano are some examples of a microcontroller development board used for programming and controlling the scale and its components.</td>
-    <td><img src="medias/parts/load_cell.jpg" alt="Load Cell" width="200"></td>
-    <td><strong>5KG Load Cell</strong><br>The 5KG load cell is a weight sensor used to measure the weight of objects placed on the plate.</td>
+    <td><img src="medias/parts/on_off_switch.jpg" alt="Switch" width="200"><br><strong>ON-OFF Switch</strong><br>The ON-OFF switch is used to control the power supply to the circuit.</td>
+    <td><img src="medias/parts/board.jpg" alt="Board" width="200"><br><strong>ATtiny or Arduino Nano</strong><br>The ATtiny or Arduino Nano are some examples of a microcontroller development board used for programming and controlling the scale and its components.</td>
+    <td><img src="medias/parts/load_cell.jpg" alt="Load Cell" width="200"><br><strong>5KG Load Cell</strong><br>The 5KG load cell is a weight sensor used to measure the weight of objects placed on the plate.</td>
   </tr>
   <tr>
-    <td><img src="medias/parts/hx711.jpg" alt="HX711" width="200"></td>
-    <td><strong>HX711</strong><br>The HX711 is used to amplify and convert the analog signal from the load cell into a digital one that can be read by the microcontroller.</td>
-    <td><img src="medias/parts/pcb_board.jpg" alt="PCB board" width="200"></td>
-    <td><strong>PCB Board</strong><br>The PCB (Printed Circuit Board) is used to connect and organize the electronic components in the project.</td>
-    <td><img src="medias/parts/rubber_support.jpg" alt="Rubber support" width="200"></td>
-    <td><strong>Rubber supports</strong><br>Rubber supports needed to avoid sliding and suport the structure of the scale.</td>
+    <td><img src="medias/parts/hx711.jpg" alt="HX711" width="200"><br><strong>HX711</strong><br>The HX711 is used to amplify and convert the analog signal from the load cell into a digital one that can be read by the microcontroller.</td>
+    <td><img src="medias/parts/pcb_board.jpg" alt="PCB board" width="200"><br><strong>PCB Board</strong><br>The PCB (Printed Circuit Board) is used to connect and organize the electronic components in the project.</td>
+    <td><img src="medias/parts/rubber_support.jpg" alt="Rubber support" width="200"><br><strong>Rubber supports</strong><br>Rubber supports needed to avoid sliding and suport the structure of the scale.</td>
   </tr>
 </table>
+
 
 
 

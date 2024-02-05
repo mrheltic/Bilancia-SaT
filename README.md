@@ -38,17 +38,17 @@ This project uses Arduino and various libraries to create a weighing system usin
 | <img src="medias/parts/9v_battery.jpg" alt="9V Battery" width="200"> | <img src="medias/parts/touch_sensor.jpg" alt="Touch button" width="200"> | <img src="medias/parts/i2c_Screen.jpg" alt="16x2 Screen" width="200"> |
 |:---:|:---:|:---:|
 | **Battery 9V** | **Touch Button (HW-139)** | **I2C 16x2 LCD Display** |
-| The 9V battery is used as a portable power source for the project. | The HW-139 touch button is a component used for touch detection. It can be used as a tare button for resetting the scale. | The I2C 16x2 LCD display is used to show information such as the measured weight or other relevant details. |
+| <div style="height:60px; overflow:auto">The 9V battery is used as a portable power source for the project.</div> | <div style="height:60px; overflow:auto">The HW-139 touch button is a component used for touch detection. It can be used as a tare button for resetting the scale.</div> | <div style="height:60px; overflow:auto">The I2C 16x2 LCD display is used to show information such as the measured weight or other relevant details.</div> |
 
 | <img src="medias/parts/on_off_switch.jpg" alt="Switch" width="200"> | <img src="medias/parts/board.jpg" alt="Board" width="200"> | <img src="medias/parts/load_cell.jpg" alt="Load Cell" width="200"> |
 |:---:|:---:|:---:|
 | **ON-OFF Switch** | **ATtiny or Arduino Nano** | **5KG Load Cell** |
-| The ON-OFF switch is used to control the power supply to the circuit. | The ATtiny or Arduino Nano are some examples of a microcontroller development board used for programming and controlling the scale and its components. | The 5KG load cell is a weight sensor used to measure the weight of objects placed on the plate. |
+| <div style="height:60px; overflow:auto">The ON-OFF switch is used to control the power supply to the circuit.</div> | <div style="height:60px; overflow:auto">The ATtiny or Arduino Nano are some examples of a microcontroller development board used for programming and controlling the scale and its components.</div> | <div style="height:60px; overflow:auto">The 5KG load cell is a weight sensor used to measure the weight of objects placed on the plate.</div> |
 
 | <img src="medias/parts/hx711.jpg" alt="HX711" width="200"> | <img src="medias/parts/pcb_board.jpg" alt="PCB board" width="200"> | <img src="medias/parts/rubber_support.jpg" alt="Rubber support" width="200"> |
 |:---:|:---:|:---:|
 | **HX711** | **PCB Board** | **Rubber supports** |
-| The HX711 is used to amplify and convert the analog signal from the load cell into a digital one that can be read by the microcontroller. | The PCB (Printed Circuit Board) is used to connect and organize the electronic components in the project. | Rubber supports needed to avoid sliding and suport the structure of the scale. |
+| <div style="height:60px; overflow:auto">The HX711 is used to amplify and convert the analog signal from the load cell into a digital one that can be read by the microcontroller.</div> | <div style="height:60px; overflow:auto">The PCB (Printed Circuit Board) is used to connect and organize the electronic components in the project.</div> | <div style="height:60px; overflow:auto">Rubber supports needed to avoid sliding and suport the structure of the scale.</div> |
 
 # Wiring
 The components are wired as follows:

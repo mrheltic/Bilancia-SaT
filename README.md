@@ -1,10 +1,14 @@
-# Bilancia SaT
+# Bilancia SaT - Gruppo 04
 
 This project uses Arduino and various libraries to create a weighing system using an HX711 load cell amplifier, an LCD display, and a tare button. The program continuously reads the change in weight and displays it on both the Serial Monitor and the LCD screen. We also implemented a tare button to reset the scale to zero when needed.
 
 ## Example
 
 <img src="medias/photos/test1.jpg" alt="Example">
+
+## Assembly
+
+
 
 ## Front View
 
@@ -138,7 +142,7 @@ If you are interested in recreating this scale project at home, you can easily r
 
 # Test
 
-
+<img src="medias/parts/sample_weights.jpeg" alt="Sample Weights">
 
 ## Calibration
 
@@ -208,7 +212,7 @@ Wanting to go through the entire calibration process in depth:
 
 - Last we used the data calculated by calibration, using it when compiling the microcontroller program.
 
-### MATLAB code
+### MATLAB pseudocode
 
 ```
 clear the workspace and the screen
@@ -286,7 +290,7 @@ plot the line as a solid line
 
 For calibration, we have to find the right compromise to make the regression line fit, considering that we have to use a smaller and smaller range of weights until we arrive at a measurement that is not fouled by noise in such a way that the behavior of the scale is no longer linear. We found that up to the third iteration we still have linear behavior, with a larger error than in the second iteration, as the distance between the points and the line increases. Using a smaller range would mean that the measurements are greatly affected by noise, increasing the error as we try to fit a line into a nonlinear set of points.
 
-#### Iteration 0
+#### Iteration n. 0
 
 <table border="0">
   <tr>
@@ -302,7 +306,7 @@ For calibration, we have to find the right compromise to make the regression lin
 
 ------
 
-#### Iteration 1
+#### Iteration n. 1
 
 <table border="0">
   <tr>
@@ -320,7 +324,7 @@ For calibration, we have to find the right compromise to make the regression lin
 
 ------
 
-#### Iteration 2
+#### Iteration n. 2
 
 <table border="0">
   <tr>
@@ -338,7 +342,7 @@ For calibration, we have to find the right compromise to make the regression lin
 
 ------
 
-#### Iteration 3
+#### Iteration n. 3
 
 <table border="0">
   <tr>
@@ -356,7 +360,7 @@ For calibration, we have to find the right compromise to make the regression lin
 
 ------
 
-#### Iteration 4
+#### Iteration n. 4
 
 <table border="0">
   <tr>
@@ -391,7 +395,7 @@ We then analyzed the data using Matlab. We calculated the mean and the standard 
 
 The results of the noise test are shown below. The mean of the vector n is 0.12 g and the standard deviation is 0.07 g. This means that the balance has a very low noise level and a high accuracy. The frequency spectrum of the vector n shows that the noise is mostly random and does not have any significant peaks. This means that the balance is stable and does not suffer from any periodic disturbances.
 
-### MATLAB code
+### MATLAB pseudocode
 
 ```
 clear the workspace and the screen
@@ -436,14 +440,14 @@ A repeatability test is normally performed by repeating the measurement at least
     <td align="center">
       <img src="Test/Repeatability/Results/repeatability_results_0.png" width=500 alt="figure 0">
       <p><b>100g</b></p>
-      <p>mean: 20.02g</p>
-      <p>stdev: 0.0235</p>
+      <p>mean: 99.97g</p>
+      <p>stdev: 0.0141</p>
     </td>
     <td align="center">
       <img src="Test/Repeatability/Results/repeatability_results_1.png"width=500 alt="figure 1">
       <p><b>20g</b></p>
-      <p>mean: 99.97g</p>
-      <p>stdev: 0.0141</p>
+      <p>mean: 20.02g</p>
+      <p>stdev: 0.0235</p>
     </td>
   </tr>
 </table>
@@ -453,7 +457,7 @@ A repeatability test is normally performed by repeating the measurement at least
 
 In the repeatability test, the instrument is first zeroed, then the load is placed on the plate and the indication is recorded once stabilized. Then the load is removed and the zero indication is checked and zeroed if necessary. Then the load is replaced and so on. For a scale with multiple fields / divisions, a test weight below the first range should be sufficient.
 
-### MATLAB code
+### MATLAB pseudocode
 
 ```
 clear the workspace and the screen
@@ -515,7 +519,7 @@ The test procedure consists of placing the test load at the center of the load r
 
 
 
-### MATLAB code
+### MATLAB pseudocode
 
 ```
 clear the workspace and the screen
@@ -561,7 +565,7 @@ Multiple points throughout the instrument’s measurement range are used to reve
 
 The purpose of a weighing test is to test the calibrated accuracy of the weighing instrument across its entire range, in several steps, with increasing and decreasing weight. Typically, 5 to 10 different loads (test points) are used, and each range must be calibrated separately in multi-range instruments.
 
-### MATLAB code
+### MATLAB pseudocode
 
 ```
 clear the workspace and the screen
@@ -601,6 +605,9 @@ Close and delete the serial connection
 ```
 plot the data
 ```
+
+> [!NOTE]
+> Try not to keep the scale turned on for a very long time, since it may lose precision due to the heating of the components.
 
 
 # Further Improvements

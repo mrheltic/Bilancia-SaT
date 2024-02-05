@@ -170,7 +170,7 @@ $$
 \text{New Offset} = \text{Offset} - \alpha \frac{\partial \text{Error}}{\partial \text{Offset}}
 $$
 
-Where $alpha$ (also called learning rate) is a parameter that controls the convergence rate of the method. The value of $alpha$ is chosen so that it is small enough to avoid swings, but large enough to reach the minimum in a few iterations.
+Where $\alpha$ (also called learning rate) is a parameter that controls the convergence rate of the method. The value of $\alpha$ is chosen so that it is small enough to avoid swings, but large enough to reach the minimum in a few iterations.
 
 To calculate the partial derivatives of the error, we need to use the following formulas:
 

@@ -1,0 +1,118 @@
+% File di lingua
+% \usepackage[italian]{babel}    
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+
+%chapter
+\newcounter{Chapcounter}
+\newcommand{\chapter}[1] 
+{ {\centering          
+  \addtocounter{Chapcounter}{1} \Large \underline{\textbf{ \color{blue} Chapter \theChapcounter: ~#1}} }   
+  \addcontentsline{toc}{section}{ \color{blue} Chapter:~\theChapcounter~~ #1}    
+}
+
+
+% Bibliografia
+\usepackage[style=numeric, sorting=none]{biblatex}
+\addbibresource{Bibliografia.bib}
+
+% Tabelle
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[font=small,format=hang,labelfont={sf,bf}]{caption}
+\captionsetup[table]{position=top}
+\usepackage{rotating}  
+\usepackage{multirow}
+\usepackage{longtable, lscape} 
+
+
+% Figure
+%\usepackage{subfig}
+\usepackage{subcaption}
+%\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{minibox}
+
+% Formule
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{eurosym}
+\usepackage[italian]{varioref}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+
+% Algoritmi
+\usepackage{algorithm,algorithmic}
+
+% Matlab code
+\usepackage{listings}
+\usepackage[framed,useliterate,numbered,autolinebreaks]{01-Impostazioni/mcode}
+
+% Utili
+\usepackage{import}
+\usepackage{url}
+\usepackage{ragged2e}
+\usepackage{changepage}
+\usepackage{hyperref}
+
+\hypersetup{%
+pdfpagemode={UseOutlines},
+bookmarksopen,
+pdfstartview={FitH},
+colorlinks,
+linkcolor={black},
+citecolor={blue},
+urlcolor={blue} 
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              NON MODIFICARE                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%% Frontespizio %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand\maketitle{
+\begin{titlepage}
+\vskip 3cm
+\begin{center}{\includegraphics[width=0.2\textwidth]{01-Impostazioni/LogoPoliBa.png}
+\vskip 0.5cm
+\Large{POLITECNICO DI BARI}
+\vskip 0.5cm
+\large{\dipartimento}
+\vskip 0.4cm
+\large{\corsodilaurea}
+\vskip 0.5cm
+\hrule
+\vskip 1cm
+\Large{\materia}}
+\vskip 1cm
+\Large{\tutor}
+\vskip 1cm
+\vskip2cm
+\LARGE{\it{Progetto:}}
+\\
+{\LARGE \bf \titolo \par}
+\vspace{\fill}
+\end{center}
+\begin{flushright}
+\Large{\it{Studenti:}}
+\\
+\Large{\studenti}
+\end{flushright}
+\vskip 0.5cm
+\begin{center}   
+\vskip 1em%
+\hrule
+\vskip 1em%
+\annoaccademico
+\end{center}
+\author{}
+\title{}
+\end{titlepage}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

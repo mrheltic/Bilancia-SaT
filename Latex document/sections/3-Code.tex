@@ -1,0 +1,37 @@
+\section{Code}
+
+\subsection{Variables}
+The program uses the following variables:
+\begin{itemize}
+\item \texttt{calibration\_factor}: This variable is used to calibrate the scale. It is a float value that can be adjusted based on the specific characteristics of the load cell and the desired measurement units.
+\item \texttt{units}: This variable stores the measured weight in grams.
+\end{itemize}
+
+\subsection{Setup}
+\begin{itemize}
+\item Serial Monitor Initialization: The Serial Monitor is initialized with a baud rate of 115200.
+\item LCD Initialization: The LCD display is initialized using the above mentioned I2C address and the number of columns and rows.
+\item Button Initialization: The tare button pin is declared as an input, and if needed, a pull-up resistor is enabled.
+\item Scale Initialization: The HX711 scale is initialized with the specified data output pin and clock input pin.
+\item Raw Data Reading: The program reads the raw data from the scale using the \texttt{scale.read()} and \texttt{scale.read\_average(20)} methods. This helps to determine the calibration factor.
+\item Calibration Factor Reading: The calibration factor is set using the \texttt{scale.set\_scale()} method based on the raw data readings. The calibration factor adjusts the scale to provide accurate weight measurements.
+\item Tare Reading: The scale is tared using the \texttt{scale.tare()} method, which resets the scale to zero. This allows to measure the weight of objects neglecting the container's one.
+\item Serial and LCD Initialization Messages: Initialization messages are printed to the Serial Monitor and the LCD display to indicate that the setup process is completed.
+\end{itemize}
+
+\subsection{Main Loop}
+\begin{itemize}
+\item Weight Measurement: The program continuously reads the change in weight using the \texttt{scale.get\_units(10)} method. The 10 parameter represents the number of samples to average for a stable reading.
+\item LCD Output: The change in weight is displayed on the LCD screen by setting the cursor position and printing the weight value.
+\item Tare Functionality: If the tare button is pressed (HIGH state), the scale is tared again using the \texttt{scale.tare()} method. This allows for resetting the scale to zero when needed.
+\item Delay: The program waits for 100 milliseconds before reading the weight again. This delay helps to stabilize and to avoid rapid fluctuations of the measurements.
+\end{itemize}
+
+\subsection{Dependencies}
+The following libraries are required for this program to compile and run:
+\begin{itemize}
+\item Arduino.h: Provides the core Arduino functions and types.
+\item Wire.h: Enables communication with I2C devices.
+\item LiquidCrystal\_I2C.h: Allows interfacing with I2C-based LCD displays.
+\item HX711.h: Provides the HX711 load cell amplifier functionality.
+\end{itemize}

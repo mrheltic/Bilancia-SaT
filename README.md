@@ -143,8 +143,8 @@ We have designed and printed several key parts for the scale, including:
     <td><p><b>Body</b>: provides support to all the components and gives an aesthetically pleasing appearance.</p></td>
   </tr>
   <tr>
-    <td><img src="medias/printed_part/body_load_cell.png" width="300" alt="Body"></td>
-    <td><p><b>Body</b>: support base was made from a 4mm thick wooden board, which was cut and drilled by a laser engraver..</p></td>
+    <td><img src="Laser cutting of the support base/Lightburn_view.png" width="300" alt="Body"></td>
+    <td><p><b>Support base</b>: was made from a 4mm thick wooden board, which was cut and drilled by a laser engraver.</p></td>
   </tr>
 </table>
 

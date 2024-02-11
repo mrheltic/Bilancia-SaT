@@ -68,8 +68,8 @@ The components are wired as follows:
 <img src="medias/load_cell_schematic_bb.png" alt="Schematic">
 
 HX711 load cell amplifier:
-- LOADCELL_DOUT_PIN is connected to pin 3 of the Arduino board.
-- LOADCELL_SCK_PIN is connected to pin 2 of the Arduino board.
+- LOADCELL_DOUT_PIN is connected to pin 4 of the Arduino board.
+- LOADCELL_SCK_PIN is connected to pin 3 of the Arduino board.
 
 LCD display (I2C interface):
 - Address: 0x27

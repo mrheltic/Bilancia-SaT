@@ -87,7 +87,7 @@ void setup() {
   scale.set_offset(offset);
 
   // Tare reading
-  scale.tare(); //Reset the scale to 0
+  //scale.tare(); //Reset the scale to 0
   Serial.println("Tare initialized\n");
   Serial.println("Readings:\n");
 }
